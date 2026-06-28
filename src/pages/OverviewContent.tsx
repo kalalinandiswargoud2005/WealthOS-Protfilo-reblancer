@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useState, useEffect } from 'react';
 import ReactApexChart from 'react-apexcharts';
 import type { ApexOptions } from 'apexcharts';
 import { TrendingUp, TrendingDown, Wallet, PieChart, BarChart2, Target, Zap, Activity } from 'lucide-react';
@@ -131,11 +131,14 @@ const PortfolioOverview: React.FC = () => {
     tooltip: { theme: 'dark', y: { formatter: (v: number) => `${v.toFixed(1)}%` } },
   };
 
-
-
   const driftStatus = driftIndex < 1 ? { label: 'Perfectly Aligned', color: '#34d399', bg: 'from-emerald-500/20 to-emerald-900/10' } : 
                       driftIndex < 3 ? { label: 'Minor Drift Detected', color: '#f59e0b', bg: 'from-amber-500/20 to-amber-900/10' } : 
                                        { label: 'Rebalance Required', color: '#f43f5e', bg: 'from-rose-500/20 to-rose-900/10' };
+
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+
+  if (!mounted) return null;
 
   return (
     <div className="p-4 md:p-8 space-y-6 font-inter bg-[#09090B] min-h-[calc(100vh-64px)] text-zinc-100 overflow-x-hidden animate-fade-in-up">

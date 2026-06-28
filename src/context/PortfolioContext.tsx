@@ -345,7 +345,8 @@ export const PortfolioProvider: React.FC<{ children: React.ReactNode }> = ({ chi
       const mfSchemes = { SBI_BLUE: '119798', HDFC_INDEX: '119063', ICICI_BLUE: '120227', NIPPON_GROWTH: '119853' };
       for (const [key, code] of Object.entries(mfSchemes)) {
         try {
-          const res = await fetch(`http://api.mfapi.in/mf/${code}`);
+          // Route through allorigins proxy to bypass strict CORS blocks on localhost
+          const res = await fetch(`https://api.allorigins.win/raw?url=https://api.mfapi.in/mf/${code}`);
           if (res.ok) {
             const data = await res.json();
             if (data && data.data && data.data[0]) {
