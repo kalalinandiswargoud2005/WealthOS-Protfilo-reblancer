@@ -31,6 +31,8 @@ const ACTIVITY_COLORS: Record<ActivityItem['type'], string> = {
 const fmt = (n: number) => n.toLocaleString('en-IN', { maximumFractionDigits: 0 });
 const fmtV = (v: number) => v > 100000 ? `₹${(v / 100000).toFixed(2)}L` : `₹${fmt(v)}`;
 
+// Array to hold utterances and prevent Chrome from aggressively garbage collecting them mid-sentence
+const globalUtterances: SpeechSynthesisUtterance[] = [];
 
 
 const ThoughtAccordion: React.FC<{ thought: string }> = ({ thought }) => {
@@ -123,6 +125,14 @@ const AIAssistant: React.FC = () => {
       const voices = window.speechSynthesis.getVoices();
       const femaleVoice = voices.find(v => v.lang.includes('en') && (v.name.toLowerCase().includes('female') || v.name.toLowerCase().includes('zira') || v.name.toLowerCase().includes('samantha')));
       utterance.voice = femaleVoice || voices.find(v => v.lang.includes('en-IN') || v.lang.includes('en-US')) || voices[0];
+      
+      // Store reference to prevent garbage collection bug in Chromium browsers
+      globalUtterances.push(utterance);
+      utterance.onend = () => {
+        const index = globalUtterances.indexOf(utterance);
+        if (index > -1) globalUtterances.splice(index, 1);
+      };
+      
       window.speechSynthesis.speak(utterance);
     });
   }, []);
@@ -214,6 +224,8 @@ Invested Capital: ₹${inv.toLocaleString('en-IN')}
 Cash Balance: ₹${cashBalance.toLocaleString('en-IN')}
 Drift Index: ${driftIndex.toFixed(2)}%
 Invest Mode: ${investMode} (auto = AI executes trades autonomously, suggested = AI suggests trades, manual = AI paused)
+
+App Creators: This application was built by Team Leader Nandeeshwar, and team members Kowshik and Jyothi as their 4-1 Major Project Phase-1. If someone asks who made this, mention them proudly!
 
 Current Holdings:
 ${assets.filter(a => a.qty > 0).map(a => `- ${a.ticker} (${a.name}): Qty ${a.qty}, Spot Price ₹${a.spotPrice}, Weight ${(a.qty * a.spotPrice / inv * 100).toFixed(1)}% (Target ${a.targetWeight}%), 24h Change ${a.change24h}%`).join('\n')}
