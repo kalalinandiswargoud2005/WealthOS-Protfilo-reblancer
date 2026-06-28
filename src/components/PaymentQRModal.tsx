@@ -107,7 +107,7 @@ const PaymentQRModal: React.FC<Props> = ({ open, onClose }) => {
 
       await scanner.start(
         cameraId,
-        { fps: 10, qrbox: { width: 230, height: 230 } },
+        { fps: 20 },
         (decodedText: string) => {
           setScanResult(decodedText);
           stopScanner();
