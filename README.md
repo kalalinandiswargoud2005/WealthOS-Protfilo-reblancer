@@ -10,13 +10,24 @@
 
 ---
 
-## 🎬 Live Working Demo Video
+## 🎬 Project Demo Videos
 
-A concise, high-impact demonstration of **WealthOS Rebalancer Pro** showcasing live autonomous portfolio rebalancing, drift detection, multi-asset trading, and Gemini conversational intelligence:
+### 🎙️ 1. Full 5-Minute Technical Demonstration (Indian Voiceover Narration)
+A comprehensive **5.7-minute (344 seconds)** technical deep dive and module-by-module walkthrough narrated in an authoritative **Indian English voiceover** (`en-IN`), complete with synchronized live on-screen subtitles and HUD metrics.
+
+- 🎥 **Watch Full HD 1080p Video**: [**Play / Download docs/demo_5min.mp4**](./docs/demo_5min.mp4) *(17.2 MB, H.264 / AAC)*
+- ⏱️ **Duration**: **5 Minutes 44 Seconds**
+- 🎙️ **Narration**: Indian English Voiceover (`en-IN-PrabhatNeural`)
+- 📋 **Synchronized Subtitles**: Included on all 10 modules
+
+---
+
+### ⚡ 2. Short Quick-Look Demo (22-Second Autoplay)
+A concise, fast-paced overview of the live application:
 
 ![WealthOS Rebalancer Pro Live Demo](./docs/demo.webp)
 
-> 📹 **Watch Full HD 1080p Video**: [Download / Open docs/demo.mp4](./docs/demo.mp4) (Length: ~22 seconds)
+> 📹 **Download Short Video**: [docs/demo.mp4](./docs/demo.mp4) (Length: ~22 seconds)
 
 ---
 

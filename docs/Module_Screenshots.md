@@ -1,14 +1,26 @@
-# WealthOS Pro – Module Screenshots & Live Working Demo
+# WealthOS Pro – Module Screenshots & Live Working Demos
 
 > [!TIP]
-> **Live Working Demo Video**: Watch the concise working demonstration video of WealthOS Pro below, covering all 6 production modules from the live application.
+> **Video Demonstrations**: Two video formats are available:
+> 1. **5-Minute Full Technical Walkthrough with Indian Voiceover Narration & Synchronized Subtitles**
+> 2. **22-Second Short Quick-Look Autoplay Animation**
 
-## 🎬 Live Application Working Demo Video
+## 🎙️ 1. Full 5-Minute Technical Video (Indian Voiceover)
+A complete **5.7-minute (344 seconds)** technical walkthrough covering all 10 modules, narrated in Indian English (`en-IN`) with real-time on-screen synchronized subtitles and HUD telemetry.
+
+- 🎥 **Full HD Video Link**: [**Download / Play docs/demo_5min.mp4**](./demo_5min.mp4) *(17.2 MB, H.264 / AAC)*
+- ⏱️ **Duration**: 5 Minutes 44 Seconds
+- 🎙️ **Voice**: Indian English Voiceover (`en-IN-PrabhatNeural`)
+- 📋 **Subtitles**: Synchronized on-screen captions
+
+---
+
+## ⚡ 2. Short 22-Second Autoplay Demo Video
 ![WealthOS Pro Live Working Demo](./demo.webp)
 
 - 📹 **Full HD 1080p Video**: [Download / Play docs/demo.mp4](./demo.mp4)
 - ⚡ **Inline Autoplay Animation**: [View docs/demo.webp](./demo.webp)
-- ⏱️ **Duration**: 22 seconds (Concise module walkthrough)
+- ⏱️ **Duration**: 22 seconds
 
 ---
 
