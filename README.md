@@ -1,73 +1,153 @@
-# React + TypeScript + Vite
+# ⚡ WealthOS Rebalancer Pro
+### *Autonomous Multi-Asset Portfolio Rebalancer Powered by Gemini AI*
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![License: MIT](https://img.shields.io/badge/License-MIT-amber.svg)](https://opensource.org/licenses/MIT)
+[![React](https://img.shields.io/badge/React-19.2-blue.svg)](https://react.dev)
+[![TypeScript](https://img.shields.io/badge/TypeScript-6.0-blue.svg)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-8.0-purple.svg)](https://vitejs.dev/)
+[![TailwindCSS](https://img.shields.io/badge/Tailwind-4.3-38bdf8.svg)](https://tailwindcss.com/)
+[![Gemini](https://img.shields.io/badge/AI-Gemini_2.5_Flash-orange.svg)](https://ai.google.dev/)
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🎬 Live Working Demo Video
 
-## React Compiler
+A concise, high-impact demonstration of **WealthOS Rebalancer Pro** showcasing live autonomous portfolio rebalancing, drift detection, multi-asset trading, and Gemini conversational intelligence:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+![WealthOS Rebalancer Pro Live Demo](./docs/demo.webp)
 
-## Expanding the ESLint configuration
+> 📹 **Watch Full HD 1080p Video**: [Download / Open docs/demo.mp4](./docs/demo.mp4) (Length: ~22 seconds)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🌟 Key Highlights & Capabilities
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+WealthOS Rebalancer Pro is an intelligent, self-driving wealth management system engineered to automate portfolio asset allocation across global and Indian markets.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- 🤖 **Autonomous Agentic Loop**: Continuous background drift monitoring running every 25 seconds with an algorithmic tolerance threshold of ±0.4%.
+- 📊 **16 Real-Time Live Assets**:
+  - **Metals**: 24K Gold & Fine Silver (MCX Live Spot Feeds).
+  - **Indian Equities**: Reliance, TCS, Infosys, HDFC Bank, ICICI Bank (NSE Live).
+  - **Mutual Funds**: SBI Bluechip, HDFC Index Nifty 50, ICICI Pru Bluechip, Nippon India Growth (MFAPI NAVs).
+  - **Cryptocurrencies**: Bitcoin (BTC), Ethereum (ETH), Solana (SOL), Ripple (XRP), Cardano (ADA) (CoinGecko Live API).
+- 🧠 **Gemini AI Financial Intelligence**: Conversational assistant with natural language understanding, voice input/output, real-time risk assessment, and portfolio optimization tips.
+- ⚡ **Zero-Drift Execution**: Micro-rebalancing logic dynamically deploys capital to under-allocated assets, minimizing tax drag and maximizing risk-adjusted alpha.
+- 💳 **Banking Ledger & UPI Settlement**: Integrated transaction audit trail, instant QR code pay/receive, and biometric authentication (WebAuthn / Passkeys).
+
+---
+
+## 🏛️ System Architecture
+
+```mermaid
+graph TD
+    User([User / Investor]) -->|WebAuthn / OTP| Auth[Secure Authentication Gateway]
+    Auth --> Dashboard[Executive Portfolio Dashboard]
+    
+    subgraph Core Engine
+        State[Portfolio Context State Engine]
+        Drift[Drift Detection & Analysis Engine]
+        Agent[Autonomous AI Rebalancing Agent]
+    end
+    
+    Dashboard <--> State
+    State <--> Drift
+    Drift -->|Deviation > 0.4%| Agent
+    Agent -->|Micro-Rebalance Orders| Ledger[Transaction Ledger & Banking]
+    
+    subgraph Real-Time Market Feeds
+        NSE[NSE Stock Ticker]
+        MCX[MCX Metals Feed]
+        CG[CoinGecko Crypto API]
+        MF[MFAPI Mutual Funds]
+    end
+    
+    NSE & MCX & CG & MF --> State
+    
+    subgraph Intelligence
+        Gemini[Gemini 2.5 Flash LLM]
+        Voice[Speech Synthesis & Voice UI]
+    end
+    
+    User <--> Gemini
+    Gemini <--> State
+    Gemini <--> Voice
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📱 Core Modules Showcase
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+| Module | Description | Key Capabilities |
+| :--- | :--- | :--- |
+| **01. Executive Dashboard** | Real-time Net Worth & Allocation metrics | Net Worth calculation, live streaming ticker, 24h P&L, Drift Index gauge |
+| **02. Drift Engine** | Automated allocation deviation analysis | Target vs actual matrix, ±0.4% tolerance triggers, zero-loss rebalancing |
+| **03. Multi-Asset Vault** | Asset holding and distribution management | 16 assets across Metals, Indian Equities, Crypto, and Mutual Funds |
+| **04. Market Watch Feed** | Live price streaming and technical charts | Sub-second price ticks, 24h high/low, volume & volatility analytics |
+| **05. Gemini AI Assistant** | Autonomous conversational co-pilot | Natural language queries, voice interaction, portfolio strategy insights |
+| **06. Banking & Ledger** | Settlement and authentication ledger | Immutable audit records, UPI QR code pay/receive, Passkey authentication |
+
+Detailed screenshots of each module can be found in [docs/Module_Screenshots.md](./docs/Module_Screenshots.md).
+
+---
+
+## 🚀 Quick Start
+
+### Prerequisites
+- [Node.js](https://nodejs.org/) (v18 or higher)
+- npm or pnpm
+
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/kalalinandiswargoud2005/WealthOS-Protfilo-reblancer.git
+   cd WealthOS-Protfilo-reblancer
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Configure Environment Variables (Optional):**
+   Create a `.env` file in the root directory:
+   ```env
+   VITE_GEMINI_API_KEY=your_gemini_api_key_here
+   ```
+
+4. **Launch the development server:**
+   ```bash
+   npm run dev
+   ```
+   Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+5. **Build for Production:**
+   ```bash
+   npm run build
+   ```
+
+---
+
+## 🛠️ Technology Stack
+
+- **Frontend Core**: React 19, TypeScript, Vite
+- **Styling & UI**: TailwindCSS v4, Lucide Icons, Glassmorphic CSS
+- **Data Visualization**: ApexCharts, React-ApexCharts
+- **Artificial Intelligence**: Google Gemini API (`@google/genai`)
+- **Persistence & Cloud**: Supabase Postgres Client, LocalStorage Fallbacks
+- **Security**: WebAuthn / FIDO2 Biometric Authentication, Dynamic 6-digit OTP
+
+---
+
+## 📄 Documentation
+
+- [System Architecture Specification](./docs/System_Architecture.md)
+- [Module Screenshots & Demo](./docs/Module_Screenshots.md)
+- [Software Development Life Cycle (SDLC)](./docs/SDLC_Documentation.md)
+- [Project Development Guide](./docs/Project_Development_Guide.md)
+
+---
+
+## ⚖️ License
+
+This project is licensed under the MIT License — see the LICENSE file for details.

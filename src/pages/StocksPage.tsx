@@ -35,6 +35,11 @@ const TOP_STOCKS: StockListItem[] = [
   { ticker: 'BAJFINANCE', name: 'Bajaj Finance Ltd', industry: 'Financial Services', basePrice: 6950, marketCapCr: 428000, pe: 30.5, divYield: 0.5, volume: '14,50,000', sparkline: [6850, 6920, 6870, 6940, 6910, 6950] },
   { ticker: 'HCLTECH', name: 'HCL Technologies Ltd', industry: 'Information Technology', basePrice: 1340, marketCapCr: 365000, pe: 26.1, divYield: 3.2, volume: '28,50,000', sparkline: [1310, 1325, 1315, 1335, 1320, 1340] },
   { ticker: 'MARUTI', name: 'Maruti Suzuki India Ltd', industry: 'Automobile', basePrice: 12200, marketCapCr: 385000, pe: 28.2, divYield: 1.1, volume: '4,50,200', sparkline: [12000, 12150, 12050, 12180, 12100, 12200] },
+  { ticker: 'NEWINDIA', name: 'New India Assurance Ltd', industry: 'Insurance', basePrice: 202.31, marketCapCr: 33000, pe: 19.5, divYield: 1.5, volume: '22,40,100', sparkline: [195, 198, 196, 201, 199, 202] },
+  { ticker: 'TATSILV', name: 'Tata Silver ETF', industry: 'Precious Metals / ETF', basePrice: 22.48, marketCapCr: 12000, pe: 14.2, divYield: 0.0, volume: '45,80,000', sparkline: [21.5, 22.1, 21.8, 22.3, 22.1, 22.48] },
+  { ticker: 'IFCI', name: 'IFCI Ltd', industry: 'Financial Services', basePrice: 85.73, marketCapCr: 21000, pe: 18.0, divYield: 0.5, volume: '98,12,000', sparkline: [82.5, 84.1, 83.2, 85.0, 84.5, 85.73] },
+  { ticker: 'ZOMATO', name: 'Zomato Ltd', industry: 'Consumer Tech', basePrice: 264.30, marketCapCr: 235000, pe: 65.4, divYield: 0.0, volume: '2,90,61,365', sparkline: [250, 255, 252, 260, 258, 264.30] },
+  { ticker: 'INDHOTEL', name: 'Indian Hotels Co Ltd', industry: 'Hospitality', basePrice: 724.75, marketCapCr: 103000, pe: 48.2, divYield: 0.7, volume: '31,77,687', sparkline: [710, 715, 712, 720, 718, 724.75] },
 ];
 
 const formatPrice = (price: number) => {
@@ -46,7 +51,7 @@ const StocksPage: React.FC = () => {
   
   const stockAssets = useMemo(() => assets.filter(a => a.category === 'stocks'), [assets]);
 
-  const [view, setView] = useState<'explore' | 'detail'>('explore');
+  const [view, setView] = useState<'explore' | 'detail' | 'holdings'>('explore');
   const [selectedTicker, setSelectedTicker] = useState<string>('RELIANCE');
   const [searchQuery, setSearchQuery] = useState<string>('');
   
@@ -87,7 +92,7 @@ const StocksPage: React.FC = () => {
 
     const fetchSuggestions = async () => {
       try {
-        const res = await fetch(`http://api.groww.in/v1/api/search/v1/entity?q=${encodeURIComponent(searchQuery)}&size=10`);
+        const res = await fetch(`https://api.groww.in/v1/api/search/v1/entity?q=${encodeURIComponent(searchQuery)}&size=10`);
         if (res.ok) {
           const data = await res.json();
           if (data && data.content) {
@@ -170,7 +175,7 @@ const StocksPage: React.FC = () => {
       const newLivePrices = { ...livePrices };
 
       try {
-        const res = await fetch(`http://api.groww.in/v1/live-data/quote?exchange=NSE&segment=CASH&trading_symbol=${selectedTicker}`, {
+        const res = await fetch(`https://api.groww.in/v1/live-data/quote?exchange=NSE&segment=CASH&trading_symbol=${selectedTicker}`, {
           headers: {
             'Accept': 'application/json',
             'Authorization': `Bearer ${GROWW_API_TOKEN}`,
@@ -221,7 +226,7 @@ const StocksPage: React.FC = () => {
     setTradeSuccess(null);
     const qty = parseInt(orderQty);
     if (isNaN(qty) || qty <= 0) {
-      setTradeError('Enter a valid quantity');
+      setTradeError('Enter a valid positive quantity');
       return;
     }
     const cost = qty * currentPrice;
@@ -250,7 +255,7 @@ const StocksPage: React.FC = () => {
     setTradeSuccess(null);
     const qty = parseInt(orderQty);
     if (isNaN(qty) || qty <= 0) {
-      setTradeError('Enter a valid quantity');
+      setTradeError('Enter a valid positive quantity');
       return;
     }
     if (qty > ownedQty) {
@@ -341,20 +346,23 @@ const StocksPage: React.FC = () => {
               onClick={() => setView('explore')}
               className={`pb-1 transition-all ${view === 'explore' ? 'text-[#00b386] border-b-2 border-[#00b386]' : 'hover:text-white'}`}
             >
-              Explore
+              Explore Markets
             </button>
             <button 
               onClick={() => {
-                if (stockAssets.length > 0) {
-                  setSelectedTicker(stockAssets[0].ticker);
-                  setView('detail');
-                } else {
-                  setView('explore');
-                }
+                setView('detail');
               }}
               className={`pb-1 transition-all ${view === 'detail' ? 'text-[#00b386] border-b-2 border-[#00b386]' : 'hover:text-white'}`}
             >
-              Holdings ({stockAssets.length})
+              Stock Details & Trade ({selectedTicker})
+            </button>
+            <button 
+              onClick={() => {
+                setView('holdings');
+              }}
+              className={`pb-1 transition-all ${view === 'holdings' ? 'text-[#00b386] border-b-2 border-[#00b386]' : 'hover:text-white'}`}
+            >
+              My Holdings ({stockAssets.length})
             </button>
           </div>
         </div>
@@ -626,8 +634,7 @@ const StocksPage: React.FC = () => {
                       </div>
                       <button 
                         onClick={() => {
-                          setSelectedTicker(stockAssets[0].ticker);
-                          setView('detail');
+                          setView('holdings');
                         }}
                         className="w-full py-2 bg-[#00b386]/10 text-[#00b386] border border-[#00b386]/20 rounded-xl text-xs font-bold hover:bg-[#00b386]/20 transition-all"
                       >
@@ -701,7 +708,7 @@ const StocksPage: React.FC = () => {
             </div>
 
           </div>
-        ) : (
+        ) : view === 'detail' ? (
           /* TRADING DETAIL VIEW */
           <div className="max-w-7xl mx-auto p-4 md:p-6 grid grid-cols-1 lg:grid-cols-4 gap-6">
             
@@ -711,7 +718,7 @@ const StocksPage: React.FC = () => {
                 onClick={() => setView('explore')}
                 className="flex items-center gap-1.5 text-xs text-zinc-400 hover:text-white transition-all font-semibold"
               >
-                <ChevronLeft className="w-4 h-4" /> Back to Explore
+                <ChevronLeft className="w-4 h-4" /> Back to Explore Markets
               </button>
             </div>
 
@@ -798,27 +805,34 @@ const StocksPage: React.FC = () => {
               <div className="bg-[#0d0d0f] border border-[#27272a] rounded-2xl p-6 shadow-xl">
                 <div className="flex items-center justify-between border-b border-[#27272a] pb-3 mb-4">
                   <span className="text-xs font-bold uppercase tracking-wider text-white border-b-2 border-[#00b386] pb-3 -mb-4">Delivery Order</span>
-                  <span className="text-[10px] text-zinc-500 font-mono">Cash: ₹{Math.round(cashBalance).toLocaleString('en-IN')}</span>
+                  <span className="text-[10px] text-zinc-500">NSE · Cash</span>
                 </div>
 
                 <div className="space-y-4">
                   <div>
-                    <label className="text-[10px] text-zinc-500 block mb-1">Quantity (shares)</label>
+                    <label className="text-[10px] text-zinc-500 uppercase font-bold block mb-1">Shares Quantity</label>
                     <input 
                       type="number" 
-                      value={orderQty} 
+                      min="1"
+                      value={orderQty}
                       onChange={e => setOrderQty(e.target.value)}
-                      className="w-full bg-zinc-900 border border-[#27272a] rounded-xl px-3 py-2 text-white text-sm font-mono focus:outline-none focus:border-[#00b386]" 
+                      className="w-full bg-zinc-950 border border-[#27272a] rounded-xl px-3 py-2 text-sm text-white font-mono outline-none focus:border-[#00b386]"
                     />
                   </div>
 
-                  <div className="bg-zinc-950 p-3 rounded-xl border border-[#222]">
-                    <div className="flex justify-between text-xs mb-1">
-                      <span className="text-zinc-500">Estimated Cost:</span>
-                      <span className="font-mono text-white">₹{(parseInt(orderQty) * currentPrice || 0).toLocaleString('en-IN')}</span>
+                  <div className="bg-zinc-950 p-3 rounded-xl border border-[#222] space-y-2">
+                    <div className="flex justify-between text-xs text-zinc-400">
+                      <span>Market Price:</span>
+                      <span className="font-mono text-white">₹{currentPrice.toFixed(2)}</span>
                     </div>
-                    <div className="flex justify-between text-xs">
-                      <span className="text-zinc-500">Your Holdings:</span>
+                    <div className="flex justify-between text-xs text-zinc-400">
+                      <span>Total Value:</span>
+                      <span className="font-mono font-bold text-white">
+                        ₹{(currentPrice * (parseInt(orderQty) || 0)).toLocaleString('en-IN')}
+                      </span>
+                    </div>
+                    <div className="flex justify-between text-xs text-zinc-400 border-t border-[#222] pt-2">
+                      <span>Owned Shares:</span>
                       <span className="font-mono text-white">{ownedQty} shares</span>
                     </div>
                   </div>
@@ -842,35 +856,98 @@ const StocksPage: React.FC = () => {
                   </div>
                 </div>
               </div>
-
-              <div className="bg-[#0d0d0f] border border-[#27272a] rounded-2xl p-5">
-                <div className="flex justify-between items-center mb-3">
-                  <h4 className="text-xs font-bold uppercase text-zinc-400 tracking-wider">Stocks Vault</h4>
-                  <span className="text-xs font-mono font-bold text-white">₹{Math.round(totalStocksValue).toLocaleString('en-IN')}</span>
-                </div>
-                <div className="space-y-2">
-                  {stockAssets.map(asset => {
-                    const live = livePrices[asset.ticker]?.ltp || asset.spotPrice;
-                    return (
-                      <div 
-                        key={asset.ticker}
-                        onClick={() => setSelectedTicker(asset.ticker)}
-                        className={`flex justify-between p-2 rounded-xl bg-zinc-950 border border-[#222] cursor-pointer hover:border-zinc-500 transition-colors ${selectedTicker === asset.ticker ? 'border-[#00b386]' : ''}`}
-                      >
-                        <div>
-                          <div className="text-xs font-bold text-white">{asset.ticker}</div>
-                          <div className="text-[9px] text-zinc-500">{asset.qty} shares</div>
-                        </div>
-                        <div className="text-right">
-                          <div className="text-xs font-mono text-zinc-300">₹{Math.round(asset.qty * live).toLocaleString('en-IN')}</div>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
             </div>
 
+          </div>
+        ) : (
+          /* MY HOLDINGS VIEW */
+          <div className="max-w-7xl mx-auto p-4 md:p-6 space-y-6 animate-fade-in">
+            <div className="flex items-center justify-between pb-2 border-b border-[#222]">
+              <div>
+                <h2 className="text-xl font-bold text-white tracking-tight flex items-center gap-2">
+                  <Briefcase className="w-5 h-5 text-[#00b386]" /> My Stock Holdings Portfolio
+                </h2>
+                <p className="text-xs text-zinc-500 mt-1">Detailed valuation and trading status for all active equity holdings</p>
+              </div>
+              <button 
+                onClick={() => setView('explore')}
+                className="flex items-center gap-1.5 text-xs text-zinc-400 hover:text-white transition-all font-semibold"
+              >
+                <ChevronLeft className="w-4 h-4" /> Back to Explore
+              </button>
+            </div>
+
+            <div className="bg-[#0d0d0f] border border-[#27272a] rounded-3xl p-6 shadow-2xl">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6 pb-6 border-b border-[#222]">
+                <div>
+                  <div className="text-[10px] text-zinc-500 uppercase font-bold tracking-wider">Total Stocks Portfolio Value</div>
+                  <div className="text-2xl font-black text-white font-mono mt-1">₹{Math.round(totalStocksValue).toLocaleString('en-IN')}</div>
+                </div>
+                <div>
+                  <div className="text-[10px] text-zinc-500 uppercase font-bold tracking-wider">Total Stock Holdings</div>
+                  <div className="text-2xl font-black text-[#00b386] font-mono mt-1">{stockAssets.filter(a => a.qty > 0).length} Active Holdings</div>
+                </div>
+                <div>
+                  <div className="text-[10px] text-zinc-500 uppercase font-bold tracking-wider">Available Cash Balance</div>
+                  <div className="text-2xl font-black text-amber-400 font-mono mt-1">₹{cashBalance.toLocaleString('en-IN')}</div>
+                </div>
+              </div>
+
+              {stockAssets.filter(a => a.qty > 0).length > 0 ? (
+                <div className="overflow-x-auto">
+                  <table className="w-full text-left border-collapse">
+                    <thead>
+                      <tr className="border-b border-[#27272a] text-[10px] font-bold uppercase tracking-wider text-zinc-500">
+                        <th className="py-3 px-4">Stock Ticker</th>
+                        <th className="py-3 px-4">Company Name</th>
+                        <th className="py-3 px-4">Shares Owned</th>
+                        <th className="py-3 px-4">Current Price</th>
+                        <th className="py-3 px-4">Current Value</th>
+                        <th className="py-3 px-4 text-right">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-[#222] text-xs">
+                      {stockAssets.filter(a => a.qty > 0).map(asset => {
+                        const live = livePrices[asset.ticker]?.ltp || asset.spotPrice;
+                        const assetVal = asset.qty * live;
+                        return (
+                          <tr key={asset.ticker} className="hover:bg-zinc-800/20 transition-colors">
+                            <td className="py-4 px-4 font-bold text-white font-mono">{asset.ticker}</td>
+                            <td className="py-4 px-4 text-zinc-300">{asset.name}</td>
+                            <td className="py-4 px-4 text-zinc-300 font-mono">{asset.qty} shares</td>
+                            <td className="py-4 px-4 text-zinc-300 font-mono">₹{live.toLocaleString('en-IN')}</td>
+                            <td className="py-4 px-4 font-bold text-white font-mono">₹{Math.round(assetVal).toLocaleString('en-IN')}</td>
+                            <td className="py-4 px-4 text-right">
+                              <button
+                                onClick={() => {
+                                  setSelectedTicker(asset.ticker);
+                                  setView('detail');
+                                }}
+                                className="px-3 py-1.5 bg-[#00b386]/10 text-[#00b386] border border-[#00b386]/30 hover:bg-[#00b386]/20 rounded-lg text-xs font-bold transition-all"
+                              >
+                                Trade / View Details
+                              </button>
+                            </td>
+                          </tr>
+                        );
+                      })}
+                    </tbody>
+                  </table>
+                </div>
+              ) : (
+                <div className="text-center py-12">
+                  <Briefcase className="w-10 h-10 text-zinc-600 mx-auto mb-3" />
+                  <h3 className="text-sm font-bold text-white">No active stock holdings</h3>
+                  <p className="text-xs text-zinc-500 mt-1">Select any stock from Explore Markets to place your first trade order.</p>
+                  <button
+                    onClick={() => setView('explore')}
+                    className="mt-4 px-5 py-2 bg-[#00b386] text-white text-xs font-bold rounded-xl hover:bg-[#009973] transition-all"
+                  >
+                    Browse Explore Markets
+                  </button>
+                </div>
+              )}
+            </div>
           </div>
         )}
       </div>

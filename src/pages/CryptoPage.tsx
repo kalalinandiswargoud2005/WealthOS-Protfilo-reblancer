@@ -58,7 +58,7 @@ const CryptoPage: React.FC = () => {
   useEffect(() => {
     const fetchTopCoins = async () => {
       try {
-        const res = await fetch('http://api.coingecko.com/api/v3/coins/markets?vs_currency=inr&order=market_cap_desc&per_page=100&page=1&sparkline=false&x_cg_demo_api_key=CG-8vJAa46j1uEXJTZQRqkaygVN');
+        const res = await fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=inr&order=market_cap_desc&per_page=100&page=1&sparkline=false&x_cg_demo_api_key=CG-8vJAa46j1uEXJTZQRqkaygVN');
         if (res.ok) {
           const data = await res.json();
           if (Array.isArray(data) && data.length > 0) {

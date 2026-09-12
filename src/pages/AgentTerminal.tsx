@@ -111,6 +111,9 @@ const AgentTerminal: React.FC = () => {
 
             {/* Model Selection */}
             <div>
+              {/* --- EXPLAIN: OLLAMA INTEGRATION UI --- */}
+              {/* Here we show how users can select different local LLM models (like Llama 3 or Mistral). */}
+              {/* This demonstrates the capability to run the Agent on-device using Ollama for privacy and zero latency. */}
               <label className="block text-xs text-zinc-500 mb-2 font-medium uppercase tracking-wider">LLM Model Engine</label>
               <select
                 value={selectedModel}

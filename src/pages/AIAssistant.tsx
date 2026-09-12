@@ -215,8 +215,16 @@ const AIAssistant: React.FC = () => {
     }
 
     try {
+      // --- EXPLAIN: GEMINI IMPLEMENTATION ---
+      // We initialize the GoogleGenAI client with the user's API key.
+      // This allows us to securely connect to the Gemini model for advanced reasoning.
       const ai = new GoogleGenAI({ apiKey: geminiKey });
+      
       const inv = assets.reduce((s, a) => s + a.qty * a.spotPrice, 0);
+      
+      // --- EXPLAIN: SYSTEM INSTRUCTION (PROMPT ENGINEERING) ---
+      // We pass the live portfolio context (assets, balance, drift) directly into the system prompt.
+      // This grounds the Gemini model in reality, preventing hallucinations and ensuring it gives personalized advice.
       const systemInstruction = `You are the WealthOS AI Assistant, a premium fintech wealth manager bot. 
 User Name: ${user?.name || 'User'}
 Total Portfolio Value: ₹${totalPortfolioValue.toLocaleString('en-IN')}
@@ -250,12 +258,15 @@ Rules:
       }));
       chatContext.push({ role: 'user', parts: [{ text: text.trim() }] });
 
+      // --- EXPLAIN: STREAMING RESPONSE ---
+      // We use generateContentStream to fetch the response in chunks.
+      // This provides a real-time, ChatGPT-like typing experience in the UI, keeping the user engaged.
       const responseStream = await ai.models.generateContentStream({
-        model: 'gemini-2.5-flash',
+        model: 'gemini-2.5-flash', // Using Gemini 2.5 Flash for ultra-low latency
         contents: chatContext,
         config: {
           systemInstruction,
-          temperature: 0.7,
+          temperature: 0.7, // 0.7 gives a balance between factual accuracy and conversational warmth
         }
       });
 
