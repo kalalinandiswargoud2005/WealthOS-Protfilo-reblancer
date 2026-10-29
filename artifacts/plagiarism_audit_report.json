@@ -1,0 +1,46 @@
+[
+  {
+    "file": "docs\\Project_Documentation.md",
+    "shared_6_grams": 0,
+    "shared_8_grams": 0,
+    "similarity_6g_pct": 0.0,
+    "similarity_8g_pct": 0.0,
+    "sample_overlaps": []
+  },
+  {
+    "file": "docs\\System_Architecture.md",
+    "shared_6_grams": 0,
+    "shared_8_grams": 0,
+    "similarity_6g_pct": 0.0,
+    "similarity_8g_pct": 0.0,
+    "sample_overlaps": []
+  },
+  {
+    "file": "Abstract.md",
+    "shared_6_grams": 0,
+    "shared_8_grams": 0,
+    "similarity_6g_pct": 0.0,
+    "similarity_8g_pct": 0.0,
+    "sample_overlaps": []
+  },
+  {
+    "file": "Project_Synopsis.md",
+    "shared_6_grams": 1,
+    "shared_8_grams": 0,
+    "similarity_6g_pct": 0.05,
+    "similarity_8g_pct": 0.0,
+    "sample_overlaps": []
+  },
+  {
+    "file": "build_batch3_docx.py",
+    "shared_6_grams": 146,
+    "shared_8_grams": 106,
+    "similarity_6g_pct": 7.86,
+    "similarity_8g_pct": 5.7,
+    "sample_overlaps": [
+      "elicits reasoning in large language models neurips vol",
+      "and r litterman global portfolio optimization financial analysts",
+      "vol 7 no 1 pp 77 91 1952"
+    ]
+  }
+]

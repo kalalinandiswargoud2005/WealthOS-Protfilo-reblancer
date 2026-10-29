@@ -1,0 +1,483 @@
+P  0 [Normal] 
+P  1 [Tmpl Body Text] 
+P  2 [Tmpl Body Text] 
+P  3 [Tmpl Heading 2] Major Project Phase 1 Report
+P  4 [Tmpl Body Text] 
+P  5 [Tmpl Body Text] 
+P  6 [Normal] Sentinel AI-An Intelligent Cyber Defense Platform for Threat Intelligence with Honeypot Lab & AI Security Copilot
+P  7 [Tmpl Body Text] 
+P  8 [Tmpl Body Text] 
+P  9 [Tmpl Heading 2] Design & developed by
+P 10 [Tmpl Body Text] 
+P 11 [Normal] Ch. Deepak	2311CS040033
+P 12 [Normal] G. Vaishnav Kumar	2311CS040053
+P 13 [Normal] G. Sai Harshal	2311CS040059
+P 14 [Tmpl Body Text] 
+P 15 [Tmpl Body Text] 
+P 16 [Tmpl Heading 3] GUIDED BY
+P 17 [Tmpl Body Text] 
+P 18 [Normal] [Guide Name] 
+P 19 [Normal] (Assistant Professor)
+P 20 [Tmpl Body Text] 
+P 21 [Tmpl Body Text] 
+P 22 [Normal] Department of Computer Science & Engineering (Cyber Security) Malla Reddy University, Hyderabad
+P 23 [Normal] 2025-26
+P 24 [Normal] 
+P 25 [Normal] 
+P 26 [Tmpl Body Text] 
+P 27 [Normal] Department of Computer Science & Engineering (Cyber Security)
+P 28 [Tmpl Body Text] 
+P 29 [Normal] CERTIFICATE
+P 30 [Tmpl Body Text] 
+P 31 [Tmpl Body Text] 
+P 32 [Normal] This is to certify that this is the Bonafide record of the application development project entitled “Sentinel AI-An Intelligent Cyber Defense Platform for Threat Intelligence with Honeypot Lab & AI Security Copilot” submitted by Ch. Deepak (2311CS040033), G. Vaishnav Kumar (2311CS040053), G. Sai Harshal (2311CS040059)of B. Tech III year II semester, Department of CSE (Cyber Security) during the academic year 2025-26. The results embodied in this report have not been submitted to any other university or institute for the award of any degree or diploma.
+P 33 [Tmpl Body Text] 
+P 34 [Tmpl Body Text] 
+P 35 [Tmpl Body Text] 
+P 36 [Tmpl Body Text] 
+P 37 [Tmpl Body Text] 
+P 38 [Tmpl Body Text] 
+P 39 [Tmpl Body Text] 
+P 40 [Tmpl Body Text] 
+P 41 [Tmpl Body Text] 
+P 42 [Normal]                          Internal Guide                                                  Dean (Cyber Security)
+P 43 [Normal]         [Guide Name]		        [HOD Name] (Associate Professor)		Professor & Dean
+P 44 [Tmpl Body Text] 
+P 45 [Tmpl Body Text] 
+P 46 [Tmpl Body Text] 
+P 47 [Tmpl Body Text] 
+P 48 [Tmpl Heading 2] External Examiner
+P 49 [Tmpl Heading 2] 
+P 50 [Normal] DECLARATION
+P 51 [Tmpl Body Text] 
+P 52 [Tmpl Body Text] 
+P 53 [Tmpl Body Text] 
+P 54 [Tmpl Body Text] We hereby declare that the project report entitled “Sentinel AI-An Intelligent Cyber Defense Platform for Threat Intelligence with Honeypot Lab & AI Security Copilot” has been carried out by us and submitted to the Department of Computer Science and Engineering (Cyber Security), Malla Reddy University, Hyderabad. This project work has been designed, developed & deployed by us, as part of the Application Development Project Work of this semester. We further declare that this project work has not been submitted in full or part for the award of any other degree in any other educational institutions.
+P 55 [Tmpl Body Text] 
+P 56 [Tmpl Body Text] Place:
+P 57 [Tmpl Body Text] Date: 
+P 58 [Tmpl Body Text] 
+P 59 [Tmpl Body Text] 
+P 60 [Tmpl Body Text] 
+P 61 [Tmpl Body Text] Ch. Deepak	2311CS040033
+P 62 [Tmpl Body Text] G. Vaishnav Kumar	2311CS040053
+P 63 [Tmpl Body Text] G. Sai Harshal	2311CS040059
+P 64 [Tmpl Body Text] 
+P 65 [Normal] ACKNOWLEDGEMENT
+P 66 [Tmpl Body Text] 
+P 67 [Tmpl Body Text] We extend our sincere gratitude to all those who have contributed to the completion of this project report. Firstly, we would like to extend our gratitude to Dr. V. S. K Reddy, Vice Chancellor, for his visionary leadership and unwavering commitment to academic excellence.
+P 68 [Tmpl Body Text] 
+P 69 [Tmpl Body Text] We would also like to express my deepest appreciation to our project guide [Guide Name], Assistant Professor, whose invaluable guidance, insightful feedback, and unwavering support have been instrumental throughout the course of this project for successful outcomes.
+P 70 [Tmpl Body Text] 
+P 71 [Tmpl Body Text] 
+P 72 [Tmpl Body Text] We extend our gratitude to our PRC – convenor, [Guide Name], for giving valuable inputs and timely guidelines to improve the quality of our project through a critical review process. We thank our project coordinator, [Project Coordinator], for her timely support.
+P 73 [Tmpl Body Text] 
+P 74 [Tmpl Body Text] 
+P 75 [Normal] We are also grateful to [HOD Name], Head of the Department (Cyber Security), for providing us with the necessary resources and facilities to carry out this project.
+P 76 [Tmpl Body Text] 
+P 77 [Tmpl Body Text] 
+P 78 [Tmpl Body Text] We are deeply indebted to all of them for their support, encouragement, and guidance, without which this project would not have been possible.
+P 79 [Tmpl Body Text] 
+P 80 [Tmpl Body Text] 
+P 81 [Tmpl Body Text] 
+P 82 [Tmpl Body Text] 
+P 83 [Tmpl Body Text] 
+P 84 [Tmpl Body Text] 
+P 85 [Tmpl Body Text] 
+P 86 [Tmpl Body Text] Ch. Deepak	2311CS040033
+P 87 [Tmpl Body Text] G. Vaishnav Kumar	2311CS040053
+P 88 [Tmpl Body Text] G. Sai Harshal	2311CS040059
+P 89 [Tmpl Body Text] 
+P 90 [Normal] ABSTRACT
+P 91 [Normal] SentinelAI is an AI-assisted cybersecurity monitoring, threat detection, investigation, incident correlation, active defence, and reporting platform designed to simulate the workflow of a modern Security Operations Centre (SOC). Traditional security monitoring tools such as SIEM platforms, standalone honeypots, and web application firewalls frequently operate in isolation, producing large volumes of alerts without sufficient context, forcing analysts to manually correlate payloads, source addresses, timestamps, and authentication activity before deciding whether an event is harmless or part of a coordinated attack.
+P 92 [Normal] SentinelAI addresses this gap by unifying event collection, rule-based attack detection, threat-intelligence enrichment, correlation, AI-assisted investigation, active defence through a Web Application Firewall, and automated reporting within a single web application. Security events are collected from a controlled Honeypot Laboratory, an attack simulator, authentication logs, and web application firewall hits. Each event is normalized into a common structure, analysed by a rule-based Detection Engine for SQL Injection, Cross-Site Scripting, brute-force login attempts, and OTP-abuse patterns, enriched with IP geolocation and abuse-reputation intelligence, and grouped by a Correlation Engine into higher-level security incidents.
+P 93 [Normal] An AI Security Copilot, powered by Large Language Models hosted on Groq Cloud (Llama 3.3 70B), allows analysts to converse with the platform about detected attacks, request natural-language explanations of malicious payloads, obtain recommended firewall rules, generate MITRE ATT&CK technique mappings, and produce Indicator-of-Compromise summaries through dedicated one-click investigator actions. All security events are delivered to the analyst dashboard in real time using WebSocket communication, and complete incident and threat-intelligence reports can be exported in Markdown, PDF, or CSV formats.
+P 94 [Normal] The platform is built using a React and Vite frontend, a Python FastAPI backend, SQLAlchemy-based data access over SQLite/PostgreSQL, and a Docker-based containerized deployment foundation with an Nginx reverse proxy. SentinelAI is intended for cybersecurity education, controlled laboratory experimentation, SOC-workflow demonstration, and portfolio development, providing a complete and transparent implementation of the security lifecycle: Detect → Enrich → Correlate → Investigate → Respond → Report.
+P 95 [Normal] Keywords: SOC Automation, Honeypot, Threat Intelligence, SQL Injection, Cross-Site Scripting (XSS), Brute-Force Detection, Web Application Firewall (WAF), Correlation Engine, MITRE ATT&CK, Large Language Models, Incident Response, Real-Time Monitoring.
+P 96 [Normal] 
+P 97 [Normal] INDEX
+P 98 [Normal] 
+P 99 [Normal] LIST OF DIAGRAMS
+P100 [Normal] 
+P101 [Normal] LIST OF SCREENSHOTS
+P102 [Normal] 
+P103 [Heading 1] CHAPTER 1  INTRODUCTION
+P104 [Normal] Modern information systems continuously generate large volumes of network activity, web requests, login events, application logs, security alerts, and user-activity records. Every interaction with a web application, database, authentication service, firewall, or network device produces information that may be important for cybersecurity monitoring. However, raw logs by themselves do not provide a complete understanding of an attack — a single failed login attempt may be harmless, while ten failed attempts from the same address followed by a successful login may indicate a compromised account. A security platform must therefore identify patterns, assign context, correlate related events, and help an analyst decide what action should be taken.
+P105 [Normal] Security Operations Centres (SOCs) are responsible for continuously monitoring such activity using Security Information and Event Management (SIEM) platforms, intrusion detection systems, endpoint detection tools, web application firewalls, threat-intelligence services, and incident-response systems. However, enterprise SOC platforms can be expensive, complex to deploy, and difficult for students or small teams to understand, often separating detection, enrichment, investigation, response, and reporting into different products. SentinelAI was created to provide a unified, understandable cybersecurity monitoring platform that demonstrates the complete SOC workflow in a single web application — combining a honeypot laboratory, an attack simulator, a real-time attack feed, threat-intelligence enrichment, a correlation engine, incident-response features, web-application-firewall controls, AI-assisted investigation, and automated reporting.
+P106 [Heading 2] 1.1  Problem Definition & Description
+P107 [Normal] Organisations and small security teams face several connected problems that SentinelAI was designed to address.
+P108 [List Paragraph] Alert Volume: Security monitoring tools can generate hundreds of alerts, many of which are low-risk, duplicated, or unrelated, so analysts spend excessive time reviewing events that are not real incidents.
+P109 [List Paragraph] Lack of Context: A raw log entry may contain a timestamp, IP address, endpoint, and payload, but it does not explain the attack technique, likely objective, severity, or recommended response.
+P110 [List Paragraph] Fragmented Tooling: Attack detection, threat intelligence, incident management, firewall-rule management, reporting, and artificial intelligence frequently exist in separate systems, forcing analysts to move between multiple interfaces.
+P111 [List Paragraph] Delayed Response: Even after an attack is detected, the analyst must manually decide which firewall rule to apply, whether the source should be blocked, whether related events exist, and how the incident should be documented.
+P112 [List Paragraph] Limited Access to Realistic Training Environments: Students may learn isolated tools such as Nmap, Wireshark, or Burp Suite without understanding how security events move through an end-to-end SOC pipeline.
+P113 [Normal] SentinelAI addresses these problems by creating a centralised security workflow that captures events, detects suspicious patterns, enriches them with external threat intelligence, correlates them into incidents, explains them using artificial intelligence, and supports response actions — all inside one platform.
+P114 [Heading 2] 1.2  Objective of the Project
+P115 [Normal] The primary objective of SentinelAI is to create an integrated cybersecurity operations platform capable of collecting, detecting, enriching, correlating, investigating, responding to, and reporting security events in real time.
+P116 [Normal] The specific technical objectives of the project are to:
+P117 [List Paragraph] Build a real-time Security Operations Centre dashboard that reflects the current security posture of the monitored environment.
+P118 [List Paragraph] Implement a rule-based Detection Engine capable of identifying SQL Injection, Cross-Site Scripting, brute-force login attempts, and OTP-abuse patterns.
+P119 [List Paragraph] Develop an isolated Honeypot Laboratory environment that safely attracts and records attacker behaviour.
+P120 [List Paragraph] Integrate external Threat Intelligence services for IP geolocation, ISP identification, and abuse-reputation scoring.
+P121 [List Paragraph] Build a Correlation Engine that converts independent, normalized events into meaningful, higher-level security incidents.
+P122 [List Paragraph] Develop a Web Application Firewall (WAF) Manager capable of inspecting and blocking malicious HTTP requests in real time.
+P123 [List Paragraph] Integrate a cloud-hosted Large Language Model (Groq Cloud — Llama 3.3 70B) as an AI Security Assistant capable of explaining attacks, recommending firewall rules, and mapping activity to MITRE ATT&CK techniques.
+P124 [List Paragraph] Implement WebSocket-based real-time broadcasting so that new security events reach the analyst dashboard without a page refresh.
+P125 [List Paragraph] Provide CSV, PDF, and AI-narrated report generation for attacks, incidents, and threat-intelligence summaries.
+P126 [List Paragraph] Prepare the platform for containerised deployment using Docker, Docker Compose, and an Nginx reverse proxy.
+P127 [Normal] The analytical objective of the project is to help users understand why an event is suspicious and what actions may be appropriate, while the educational objective is to demonstrate a complete SOC lifecycle in a system that students and evaluators can inspect end-to-end.
+P128 [Heading 2] 1.3  Scope of the Project
+P129 [Normal] The current scope of SentinelAI includes web-application security monitoring, honeypot activity capture, simulated attack generation, IP-based threat intelligence, SQL-Injection detection, Cross-Site-Scripting detection, OTP brute-force detection, authentication pattern analysis, WAF event management, incident correlation, AI-assisted investigation, multi-format report generation, and containerised deployment preparation.
+P130 [Normal] The system is not currently designed for full enterprise packet inspection, endpoint telemetry from thousands of devices, large-scale log ingestion, high-availability multi-region deployment, or regulated production environments. These areas are considered future expansion opportunities and are discussed in Chapter 6.
+P131 [Normal] 
+P132 [Heading 1] CHAPTER 2  SYSTEM ANALYSIS
+P133 [Heading 2] 2.1  Existing System
+P134 [Heading 3] 2.1.1  Background & Literature Survey
+P135 [Normal] Security monitoring has traditionally relied on Security Information and Event Management (SIEM) platforms such as Splunk Enterprise Security, IBM QRadar, Microsoft Sentinel, Elastic Security, and Wazuh, which collect logs from multiple devices, correlate events, and provide dashboards for analysts. A typical SIEM pipeline includes log collection, parsing, normalization, indexing, detection rules, alert generation, dashboards, and incident review. Alongside SIEM technology, modern research has emphasised Threat Intelligence Platforms, standalone Honeypots, Web Application Firewalls, Intrusion Detection Systems, and the use of Artificial Intelligence and Large Language Models for automated log analysis and intelligent recommendation.
+P136 [Normal] Although these technologies improve organisational security, most enterprise solutions remain expensive, complex to deploy, and difficult for students or small organisations to implement. SentinelAI builds on these concepts by integrating multiple security capabilities — detection, honeypot deception, threat intelligence, correlation, active defence, and AI-assisted investigation — into a single, lightweight, AI-assisted platform suitable for educational environments and small Security Operations Centres.
+P137 [Heading 3] 2.1.2  Limitations of Existing System
+P138 [List Paragraph] High Cost & Complex Deployment: High licensing and infrastructure costs restrict access for educational institutions and small organisations, and most SIEM platforms require complex installation, configuration, and ongoing maintenance.
+P139 [List Paragraph] Fragmented, Manual Workflows: Analysts must switch between multiple disconnected tools — a SIEM for logs, a separate threat-intelligence portal, a separate firewall console, and a separate reporting tool — to complete a single investigation.
+P140 [List Paragraph] Limited AI Assistance & Automation: Existing platforms often lack an integrated AI assistant that can explain attacks in natural language, and typically require additional commercial subscriptions for threat intelligence.
+P141 [List Paragraph] Isolated Honeypot Deployments: Traditional honeypots operate as standalone decoy systems disconnected from the main SIEM, so captured attacker behaviour must be manually exported and cross-referenced with other logs.
+P142 [List Paragraph] Alert Fatigue: Because independent detections are not automatically correlated into incidents, analysts are exposed to a high volume of low-context alerts, increasing investigation time and the risk of missing a genuine, coordinated attack.
+P143 [Normal] These limitations motivated the design of SentinelAI as a single, unified, AI-assisted SOC platform rather than a collection of disconnected security tools.
+P144 [Heading 2] 2.2  Proposed System
+P145 [Normal] SentinelAI integrates monitoring, threat intelligence, honeypot technology, AI-powered investigation, web-application-firewall management, correlation, and automated reporting within a single web application. Security events generated by a controlled Honeypot Laboratory, an attack simulator, authentication attempts, and WAF hits are normalized into a common structure, analysed by a rule-based Detection Engine, enriched with external Threat Intelligence, grouped into incidents by the Correlation Engine, explained by an AI Security Assistant, and delivered to the analyst in real time through a WebSocket-driven dashboard.
+P146 [Heading 3] 2.2.1  Advantages of Proposed System
+P147 [List Paragraph] Unified SOC Platform: A single web application combines monitoring, threat intelligence, honeypot deception, AI-powered investigation, WAF management, correlation, and automated reporting, eliminating the need to move between multiple disconnected tools.
+P148 [List Paragraph] AI-Powered Investigation: Groq Cloud Large Language Models generate human-readable explanations of attacks, recommend firewall rules, identify Indicators of Compromise, and map suspicious activity to MITRE ATT&CK techniques through dedicated one-click investigator actions.
+P149 [List Paragraph] Real-Time Correlation & Enrichment: The platform continuously correlates related events into single incidents and enriches suspicious IPs with reputation scores, geolocation, and abuse history for faster investigation.
+P150 [List Paragraph] Active, Not Just Passive, Defence: Unlike a plain honeypot or IDS that only records or alerts, SentinelAI's WAF Manager can actively block malicious HTTP requests in real time based on configurable rules.
+P151 [List Paragraph] Open-Source, Low-Cost Deployment: The platform is built entirely on open-source technologies — FastAPI, React, SQLAlchemy, Docker, and SQLite/PostgreSQL — making it inexpensive and easy to deploy compared to commercial SIEM suites.
+P152 [List Paragraph] Educational Transparency: Because every stage of the pipeline (Detect → Enrich → Correlate → Investigate → Respond → Report) is visible and inspectable, the platform is well-suited for cybersecurity education and SOC-workflow demonstration.
+P153 [Heading 2] 2.3  Software & Hardware Requirements
+P154 [Heading 3] 2.3.1  Software Requirements
+P155 [List Paragraph] Operating System: Windows 10/11, Linux (Ubuntu 20.04+), or macOS.
+P156 [List Paragraph] Backend Framework: FastAPI (Python 3.11), a high-performance asynchronous framework used to build REST APIs and manage WebSocket connections.
+P157 [List Paragraph] Frontend Framework: React.js with Vite, for a responsive, interactive SOC dashboard.
+P158 [List Paragraph] Database & ORM: SQLite for local development, with PostgreSQL support (managed through SQLAlchemy) for production-oriented deployment.
+P159 [List Paragraph] AI Provider: Groq Cloud (Llama 3.3 70B Versatile) for AI-assisted investigation and natural-language explanations.
+P160 [List Paragraph] Containerisation: Docker and Docker Compose for building and running the backend, frontend, and database containers.
+P161 [List Paragraph] Web Server / Reverse Proxy: Nginx, used to serve the built frontend and proxy REST and WebSocket traffic to the backend.
+P162 [List Paragraph] IDE / Tools: Visual Studio Code, Git, Postman / cURL for API testing.
+P163 [Heading 3] 2.3.2  Hardware Requirements
+P164 [List Paragraph] Processor: Intel Core i5 (8th generation or higher) or equivalent, to manage concurrent backend, frontend, and containerised services.
+P165 [List Paragraph] RAM: Minimum 8 GB (16 GB recommended) to comfortably run the FastAPI backend, React development server, database, and Docker containers simultaneously.
+P166 [List Paragraph] Storage: Minimum 10 GB of free disk space (SSD preferred) for source code, dependencies, database files, Docker images, and generated reports.
+P167 [List Paragraph] Network: A stable internet connection is required for Groq Cloud AI inference and external Threat Intelligence lookups (ip-api.com, AbuseIPDB).
+P168 [Heading 2] 2.4  Feasibility Study
+P169 [Heading 3] 2.4.1  Technical Feasibility
+P170 [Normal] SentinelAI is built entirely using mature, well-documented, open-source technologies — FastAPI, React.js, SQLAlchemy, Docker, and SQLite/PostgreSQL — ensuring high compatibility, scalability, and ease of deployment. The modular architecture allows new security components (for example, an additional detection rule set or a new threat-intelligence provider) to be integrated without affecting existing functionality. WebSocket-based communication ensures that the live attack feed, dashboard counters, and AI-assistant status update in real time with minimal engineering complexity, and the Groq Cloud API provides reliable, low-latency access to large-language-model inference without requiring local GPU infrastructure.
+P171 [Heading 3] 2.4.2  Robustness & Reliability
+P172 [Normal] Robustness is achieved through the platform's layered, decoupled architecture. The React frontend, FastAPI backend, and database layer operate as separate concerns connected through REST APIs and WebSockets, so that a temporary slowdown in AI inference or an external threat-intelligence lookup does not block the core detection and correlation pipeline. When an external Threat Intelligence API is unavailable, SentinelAI falls back to a deterministic internal classification rather than failing the request outright, ensuring that every attack record is still enriched and stored. Reliability is further reinforced through an automated backend test suite (Pytest) and a verified frontend production build (Vite), both of which are run before any deployment-related change is committed.
+P173 [Heading 3] 2.4.3  Economic Feasibility
+P174 [Normal] The project leverages open-source technologies including FastAPI, React.js, SQLAlchemy, SQLite/PostgreSQL, Docker, and Groq Cloud, significantly reducing development and deployment costs compared to commercial SIEM platforms that charge per-gigabyte ingestion or per-seat licensing fees. Groq Cloud's inference pricing for the selected model is a fraction of the cost of running and maintaining a dedicated local GPU server for a comparable Large Language Model. The modular, containerised architecture also enables future scalability — for example, migrating from SQLite to PostgreSQL, or adding new detection rules — while maintaining low operational costs, making the platform well-suited for educational institutions, research laboratories, and small organisations with limited security budgets.
+P175 [Normal] 
+P176 [Heading 1] CHAPTER 3  ARCHITECTURAL DESIGN
+P177 [Heading 2] 3.1  Modules Design
+P178 [Normal] SentinelAI is designed using a modular architecture in which each module is responsible for a distinct part of the security lifecycle. This separation ensures that a failure or slowdown in one module (for example, a delayed AI response) does not disrupt the core detection and correlation pipeline.
+P179 [Normal] 3.1.1  Authentication Module
+P180 [Normal] The Authentication Module secures user access to SentinelAI, managing registration, login, authorisation, and session handling. It validates credentials through encrypted mechanisms and enforces role-based access control so that only authorised analysts can view or modify security policies, reports, and configurations. Protected REST API endpoints safeguard sensitive cybersecurity information from unauthorised access.
+P181 [Normal] 3.1.2  Dashboard & Live Monitoring Module
+P182 [Normal] The Dashboard Module is SentinelAI's central monitoring interface, giving analysts a real-time view of the organisation's cybersecurity posture. It aggregates data from the Correlation Engine, Threat Intelligence Engine, Honeypot Laboratory, and AI Assistant, visualising alerts, attack statistics, and system health through dynamic charts and activity feeds without requiring the analyst to switch between tools.
+P183 [Normal] 3.1.3  Threat Intelligence & Correlation Engine
+P184 [Normal] The Threat Intelligence Module enriches suspicious IP addresses with geolocation, abuse-confidence scores, and historical malicious activity obtained from external services such as ip-api.com and AbuseIPDB, falling back to a deterministic internal classification when an external service is unavailable. The Correlation Engine analyses these normalised events to group related alerts into meaningful incidents — automatically classifying patterns such as brute-force compromises — significantly reducing alert fatigue for the analyst.
+P185 [Normal] 3.1.4  Honeypot Laboratory Module
+P186 [Normal] The Honeypot Laboratory is an isolated environment that safely attracts attackers and captures malicious activity without exposing production systems, hosting decoy web services that imitate vulnerable applications. Every request received by the honeypot is monitored and analysed in real time, with captured payloads and attack attempts forwarded directly to the Correlation Engine. The module supports both Local (127.0.0.1) and LAN (0.0.0.0) modes, providing valuable data for AI-assisted investigation and classroom demonstrations.
+P187 [Normal] 3.1.5  AI Security Assistant Module
+P188 [Normal] The AI Security Assistant integrates Large Language Models hosted on Groq Cloud to support analysts during investigations. Analysts can ask questions about detected attacks, and the assistant generates human-readable explanations, identifies Indicators of Compromise, recommends firewall rules, maps attacks to MITRE ATT&CK techniques, and summarises incidents through dedicated one-click investigator actions such as Explain Attack, Recommend Firewall Rule, Explain Payload, Map to MITRE, and IOC Summary.
+P189 [Normal] 3.1.6  Web Application Firewall (WAF) Manager Module
+P190 [Normal] The WAF Manager allows the analyst to review and manage rules (WAFRule) that detect or block suspicious web requests, and to inspect every blocked request (WAFHit). The module inspects the URL path, query parameters, request body, headers, source IP, payload patterns, and HTTP method of every incoming request, returning a custom HTTP 403 response and recording a WAF hit whenever a rule is matched.
+P191 [Normal] 3.1.7  Reports Module
+P192 [Normal] The Reports Module converts structured attack and incident data, together with AI-generated narrative summaries, MITRE ATT&CK mappings, and Indicator-of-Compromise lists, into exportable documentation in Markdown, PDF, or CSV format. Generated reports are written to a persistent storage volume so that they survive a backend container restart.
+P193 [Normal] 3.1.8  Settings & Administrative Module
+P194 [Normal] The Settings Module stores configurable operational preferences such as detection thresholds, notification configuration, AI provider preferences, honeypot LAN-mode toggles, and report preferences. Sensitive values, such as a configured API key, are never returned openly to the frontend and are instead displayed as “Configured” or masked. The associated administrative area provides visibility into user logins, failed login attempts, and suspicious administrative activity.
+P195 [Heading 2] 3.2  Method & Algorithm Design
+P196 [Heading 3] Algorithm 3.1 — Attack Detection Method (Detection Engine)
+P197 [Normal] Method Design — Event Normalisation: SentinelAI receives events from the Honeypot Laboratory, the Web Application Firewall, API logs, and the authentication system, normalising them into a common structure before the Detection Engine compares each event against rules for SQL Injection, Cross-Site Scripting, brute-force attempts, and suspicious requests.
+P198 [Normal] Algorithm:
+P199 [List Paragraph] 1.  Receive incoming event.
+P200 [List Paragraph] 2.  Normalise the log structure.
+P201 [List Paragraph] 3.  Compare the event against detection rules (SQL Injection, XSS, brute-force / OTP thresholds).
+P202 [List Paragraph] 4.  Assign a severity level and attack type.
+P203 [List Paragraph] 5.  Generate a security alert / attack record.
+P204 [List Paragraph] 6.  Forward the alert to the Correlation Engine.
+P205 [Heading 3] Algorithm 3.2 — Threat Intelligence & AI Investigation Algorithm
+P206 [Normal] Method Design — Enrichment & AI Analysis: After an incident is correlated, SentinelAI queries external Threat Intelligence providers for IP reputation, geolocation, ASN, and abuse history, then feeds the enriched data to the AI Security Assistant, which combines it with the attack logs to generate a detailed investigation report.
+P207 [Normal] Algorithm:
+P208 [List Paragraph] 1.  Receive the attacker IP address.
+P209 [List Paragraph] 2.  Query Threat Intelligence APIs (ip-api.com, AbuseIPDB).
+P210 [List Paragraph] 3.  Collect enrichment data (reputation, geolocation, ASN, abuse reports).
+P211 [List Paragraph] 4.  Combine enrichment data with the associated incident logs.
+P212 [List Paragraph] 5.  Generate an AI explanation of the attack (Groq Cloud — Llama 3.3 70B).
+P213 [List Paragraph] 6.  Recommend a mitigation strategy (firewall rule, block, escalate).
+P214 [List Paragraph] 7.  Create the investigation report.
+P215 [Normal] 
+P216 [Heading 2] 3.3  Project Architecture
+P217 [Heading 3] 3.3.1  Architectural Diagram
+P218 [Normal] 
+P219 [Normal] Figure 1: SentinelAI System Architecture Diagram
+P220 [Normal] The architecture is organised into three layers. The Presentation Layer, built with React.js and Vite, provides the Dashboard, Live Monitoring, Agent / AI Copilot, Honeypot Lab, WAF Manager, Correlation, Reports, and Settings screens presented to the security analyst. The Application Layer is built with FastAPI and contains the Authentication Service, Correlation Engine, Threat Intelligence Engine, AI Assistant, Honeypot Service, Web Application Firewall, Report Generator, and Monitoring Service. The Data Layer uses SQLAlchemy over SQLite or PostgreSQL to store incidents, alerts, firewall rules, attack logs, and user information. All components communicate using REST APIs and WebSocket connections, enabling real-time updates across the platform. Each of the three layers can scale and evolve independently while keeping the platform fully real-time.
+P221 [Heading 3] 3.3.2  Data Flow Diagram
+P222 [Normal] 
+P223 [Normal] Figure 2: SentinelAI Data Flow Diagram
+P224 [Normal] Event Collection: network traffic and user activity generate security events collected by the Detection Engine. Normalisation: collected events are normalised into a common log structure for consistent analysis. Correlation: normalised events are forwarded to the Correlation Engine for incident grouping. Threat Intelligence: the Threat Intelligence Engine enriches suspicious IP addresses using external intelligence sources. AI Investigation: the AI Assistant generates investigation summaries and mitigation recommendations. Data Storage: all processed information is stored within the database for retrieval and reporting. Dashboard & Reports: processed information is displayed through the Dashboard, Reports Module, and Threat Feed. Honeypot Feed: captured honeypot activity is merged into the same flow for unified analysis. Real-Time Delivery: WebSocket connections push updates instantly to the AI Assistant and analyst dashboard.
+P225 [Heading 3] 3.3.3  Class Diagram
+P226 [Normal] 
+P227 [Normal] Figure 3: SentinelAI Class Diagram
+P228 [Normal] The User class manages authentication, user sessions, and role-based permissions for accessing platform modules. The Alert class stores every security event detected by the Detection Engine, including attack type, severity, and timestamp. The Incident class represents correlated security incidents grouped from related alerts. The ThreatIntel class enriches suspicious IPs with reputation scores, geolocation, and network-ownership information. The WAFRule and WAFHit classes store custom firewall rules and every blocked request for investigation. The AIInvestigation class maintains AI-generated analyses, MITRE ATT&CK mappings, IOC summaries, and mitigation recommendations. The Report and Playbook classes manage generated reports (Markdown, PDF, CSV) and automated response actions. The Settings class stores configurable platform preferences and system parameters.
+P229 [Heading 3] 3.3.4  Use Case Diagram
+P230 [Normal] 
+P231 [Normal] Figure 4: SentinelAI Use Case Diagram
+P232 [Normal] The SOC Analyst continuously monitors incoming events, investigates attacks, and interacts with the AI Assistant to manage incidents. The Administrator configures settings, manages user accounts, creates firewall rules, and controls the Honeypot Laboratory. The AI Security Assistant automatically analyses incidents, explains attacks, and maps techniques to MITRE ATT&CK. Major use cases include: Monitor Dashboard (view real-time attack statistics and the live threat feed), Use AI Assistant (perform one-click attack explanation, IOC summary, and firewall recommendations), Manage WAF & Honeypot (configure firewall rules and start / stop the Honeypot Laboratory), View Threat Intelligence (review IP enrichment data and MITRE ATT&CK technique mapping), Generate & Export Reports (produce and download incident reports in Markdown, CSV, or PDF), and Execute Incident Response (apply recommended mitigation and response actions to contain threats).
+P233 [Normal] 
+P234 [Heading 3] 3.3.5  Sequence Diagram
+P235 [Normal] 
+P236 [Normal] Figure 5: Attack Detection and Investigation Sequence Diagram
+P237 [Normal] Attack Received → the Detection Engine evaluates the incoming request against predefined rules. Correlation → related alerts are grouped into a single security incident. Threat Intelligence → the attacker IP is enriched with reputation, geolocation, and abuse data. AI Investigation → the AI Assistant generates an explanation, MITRE mapping, and IOC list. Dashboard Update → the investigation report is stored and displayed for the analyst.
+P238 [Heading 3] 3.3.6  Activity Diagram
+P239 [Normal] 
+P240 [Normal] Figure 6: SentinelAI Activity Diagram
+P241 [Normal] Incoming Request → the Detection Engine inspects traffic against predefined rules. Alert Generation → suspicious activity is converted into a security alert and correlated. Threat Intelligence & AI Analysis → attacker context is enriched and analysed by the AI Assistant. Incident Response → recommended firewall rules and MITRE techniques are applied. Reporting → reports are generated and reviewed by analysts through the dashboard.
+P242 [Heading 3] 3.3.7  Deployment Architecture
+P243 [Normal] SentinelAI's deployment foundation (introduced during the project's containerisation phase) is organised as three cooperating Docker containers behind a reverse proxy. An Nginx frontend container serves the compiled React application and proxies REST and WebSocket traffic; a FastAPI backend container hosts the Detection Engine, Correlation Engine, Threat Intelligence Engine, AI Assistant, Honeypot Service, and WAF; and a PostgreSQL database container persists incidents, alerts, firewall rules, and reports. The stack is defined using Dockerfile.backend, Dockerfile.frontend, and docker-compose.yml, with pg_dump / psql based backup and restore scripts, environment-based WebSocket configuration, trusted-host validation, and production-oriented CORS handling. The reports directory is mounted as a persistent volume so that generated documents are not lost when the backend container restarts.
+P244 [Normal] Nginx Frontend Container  →  FastAPI Backend Container  →  PostgreSQL Database Container
+P245 [Normal] This containerised foundation has passed static configuration review; full local Docker-runtime validation and hardened production deployment are tracked as near-term roadmap items (Section 6.2).
+P246 [Normal] 
+P247 [Heading 2] 3.4  System & Process Workflows
+P248 [Normal] In addition to the standard UML views presented in Section 3.3, the following workflow diagrams document the specific operational pipelines implemented inside SentinelAI — from the three-tier deployment layout down to each individual detection, enrichment, and response pathway.
+P249 [Heading 3] 3.4.1  Three-Tier Architecture
+P250 [Normal] 
+P251 [Normal] Figure 7: SentinelAI Three-Tier Architecture
+P252 [Normal] The Presentation Tier (React / Vite) hosts the Dashboard, Live Monitoring, AI Agent UI, WAF & Honeypot UI, and Report UI. The Application Tier (FastAPI backend) hosts the Auth Service, Detection Engine, Correlation Engine, AI Copilot, WAF Manager, and Report Generator. The Data Tier (SQLAlchemy storage) persists Attacks, Incidents, WAF Rules, Reports, Threat Intelligence results, and user information. REST and WebSocket channels connect every tier so that all modules exchange data with the FastAPI backend over internal calls, REST endpoints, or WebSocket broadcasts.
+P253 [Heading 3] 3.4.2  Module Interaction Diagram
+P254 [Normal] 
+P255 [Normal] Figure 8: Module Interaction Diagram
+P256 [Normal] The FastAPI backend API layer sits at the centre of the platform, exchanging data directly with the Dashboard Module, Attack Feed Module, Honeypot Lab (Aetheris) Module, WAF Manager & Active Defence Module, Threat Intelligence Engine, Correlation Engine, Incident Management Module, AI Security Copilot, Reporting Module, and Settings / Admin Monitoring Module. All modules exchange data with the FastAPI backend via internal calls, REST endpoints, or WebSocket broadcasts, keeping the architecture consistent and centrally coordinated.
+P257 [Heading 3] 3.4.3  Detection Engine Workflow
+P258 [Normal] 
+P259 [Normal] Figure 9: Detection Engine Workflow
+P260 [Normal] An incoming event from the Honeypot, WAF, Authentication service, or Simulator is received, and its metadata — payload, headers, source IP, and endpoint — is extracted. The event is pattern-matched against SQL-Injection, XSS, brute-force, and OTP thresholds. If no rule is matched, the event is discarded and logged as benign traffic; if a rule matches, the system assigns an attack type, severity, and confidence score, creates an attack record in the database, and forwards the normalised event to the Correlation Engine. Detection rules combine SQL-Injection and Cross-Site-Scripting pattern signatures with brute-force and OTP attempt-count thresholds evaluated per source IP within a rolling time window.
+P261 [Heading 3] 3.4.4  Threat Intelligence Workflow
+P262 [Normal] 
+P263 [Normal] Figure 10: Threat Intelligence Enrichment Workflow
+P264 [Normal] Upon receiving a source IP for enrichment, SentinelAI first checks whether the IP was recently cached; if so, cached reputation and geolocation data is reused. Otherwise, external services — ip-api.com for geolocation and AbuseIPDB for reputation — are queried. If an external API is unavailable, a deterministic fallback classification is applied; otherwise, the response is parsed for country, region, ISP, and abuse score, and the enrichment is attached to the attack record and returned to the Correlation Engine. This enrichment data is reused by the Correlation Engine and the AI Copilot throughout the investigation.
+P265 [Normal] 
+P266 [Heading 3] 3.4.5  Honeypot Data Flow
+P267 [Normal] 
+P268 [Normal] Figure 11: Honeypot Laboratory Data Flow
+P269 [Normal] An attacker or visitor interacts with the Honeypot Laboratory's decoy web page; the honeypot captures the payload, IP address, user agent, and headers, and forwards the event to the Detection Engine. The attack record is created and classified, broadcast via WebSocket, and the Dashboard and Attack Feed update instantly. Aetheris (the honeypot environment) is an isolated decoy environment — every captured interaction (credentials, payloads, request metadata) is treated as malicious by definition and analysed for attacker TTPs (Tactics, Techniques, and Procedures).
+P270 [Heading 3] 3.4.6  WAF Processing Flow
+P271 [Normal] 
+P272 [Normal] Figure 12: Web Application Firewall Processing Flow
+P273 [Normal] On receiving an incoming HTTP request, the WAF Engine evaluates it against active WAF rules (path, query, body, headers, method). If a rule matches, the request is blocked (HTTP 403), a WAF-hit record is created, and an Attack event is generated for visibility; if no rule matches, the request is allowed to pass through to the application. The custom Web Application Firewall inspects every request in real time, blocking malicious HTTP traffic while remaining fully visible on the Attack Feed and Dashboard.
+P274 [Heading 3] 3.4.7  AI Investigation Workflow
+P275 [Normal] 
+P276 [Normal] Figure 13: AI Security Copilot Investigation Workflow
+P277 [Normal] When an analyst opens an attack or incident in the Agent workspace, the backend loads full context (payload, protocol, IOC data, timeline) and structures a request to the Groq Cloud API (Llama 3.3 70B Versatile). The response is streamed back to the UI in chunks, and the analyst can trigger dedicated one-click actions — Explain Attack, Map to MITRE ATT&CK, IOC Summary, and Recommend Firewall Rule. The AI Copilot never takes autonomous action — it produces explanations and recommendations for the analyst to review and approve.
+P278 [Heading 3] 3.4.8  Incident Response Workflow
+P279 [Normal] 
+P280 [Normal] Figure 14: Incident Response Workflow
+P281 [Normal] A correlated incident created by the Correlation Engine is reviewed by the analyst alongside AI investigation findings. If a response action is required, the analyst can escalate the incident or block the source IP; otherwise, the analyst can acknowledge or resolve the incident directly. In every case, a notification is triggered and the action is documented in the incident record. Response actions are always analyst-initiated — SentinelAI recommends the appropriate action, and the analyst decides and executes it.
+P282 [Heading 3] 3.4.9  Report Generation Workflow
+P283 [Normal] 
+P284 [Normal] Figure 15: Report Generation Workflow
+P285 [Normal] The analyst selects an attack / incident range and the desired report type (CSV, PDF, or AI narrative). The Reporting Module gathers the relevant attacks, incidents, threat-intelligence enrichment, and AI-generated summaries, and generates the report in the selected format. The report is stored in a persistent reports volume and returned to the analyst for download. Reports combine structured attack / incident data with AI-generated narrative summaries, MITRE ATT&CK mappings, and IOC lists — exportable as Markdown, PDF, or CSV.
+P286 [Heading 3] 3.4.10  Complete SOC Lifecycle Workflow
+P287 [Normal] 
+P288 [Normal] Figure 16: SentinelAI Continuous SOC Lifecycle
+P289 [Normal] SentinelAI's complete operational lifecycle is a continuous six-stage loop. (1) Detect — Honeypot, WAF, and authentication events are analysed by the Detection Engine against rule sets. (2) Enrich — Threat Intelligence adds geolocation, ISP, and abuse reputation to the attacker IP. (3) Correlate — the Correlation Engine groups related events into a single security incident. (4) Investigate — the AI Security Copilot (Groq / Llama 3.3 70B) explains the attack and maps it to MITRE ATT&CK. (5) Respond — the analyst acknowledges, escalates, blocks, or resolves the incident through the Investigator. (6) Report — the Reporting Module exports Markdown, PDF, or CSV incident and threat summaries. This continuous loop constitutes the core operational value of the SentinelAI platform.
+P290 [Normal] 
+P291 [Heading 1] CHAPTER 4  IMPLEMENTATION & TESTING
+P292 [Heading 2] 4.1  Technology Stack & Implementation
+P293 [Heading 3] 4.1.1  Frontend Implementation
+P294 [Normal] The frontend is implemented using React with Vite as the build tool, and plain JavaScript / JSX with CSS-based component styling. React is responsible for the user interface — pages, cards, tables, forms, dashboards, and interactive controls — while Recharts is used for graphs and visualisations such as the attack-trend and severity-distribution charts. The frontend communicates with the backend using REST API calls for standard data retrieval and a persistent WebSocket connection for real-time attack-feed updates. Vite is used for both the development server and the production build.
+P295 [Heading 3] 4.1.2  Backend Implementation
+P296 [Normal] The backend is implemented in Python using FastAPI, an asynchronous, high-performance web framework, served through Uvicorn. SQLAlchemy provides the Object-Relational Mapping layer over SQLite (local development) and PostgreSQL (production-oriented deployment), while Pydantic models handle configuration and request/response validation. FastAPI exposes REST endpoints and WebSocket routes for authentication, attacks, incidents, the AI Agent, the WAF, reports, settings, and honeypot operations.
+P297 [Heading 3] 4.1.3  Real-Time Communication
+P298 [Normal] SentinelAI uses a dedicated WebSocket endpoint (/api/attacks/ws) so that the frontend receives new security events without refreshing the page. When a new attack reaches the backend, it is first saved to the database, then a WebSocket message is broadcast to every connected client; the frontend receives the event and the Dashboard, Attack Feed, and related activity views update instantly.
+P299 [Heading 3] 4.1.4  Database Design
+P300 [Normal] SentinelAI originally operated with SQLite for simple local development. The project's deployment-hardening phase introduced PostgreSQL support for production deployment because it offers better reliability, concurrency, scalability, and backup support. The database stores Attacks, Incidents, normalised logs, correlation results, WAF rules, WAF hits, user-related data, reports, settings, threat-intelligence results, and administrative activity.
+P301 [Heading 3] 4.1.5  AI Provider Integration
+P302 [Normal] SentinelAI uses Groq Cloud for AI inference, with Llama 3.3 70B Versatile configured as the default model. The AI service is used to explain attacks, interpret malicious payloads, recommend firewall rules, map activity to MITRE ATT&CK, produce IOC summaries, generate investigation insights, and create security reports. The Groq API key is stored only in the backend environment configuration and is never exposed to the frontend or committed to source control.
+P303 [Heading 3] 4.1.6  Containerisation & Deployment Foundation
+P304 [Normal] The deployment-hardening phase introduced Dockerfile.backend, Dockerfile.frontend, docker-compose.yml, an nginx.conf reverse-proxy configuration, PostgreSQL container preparation, database backup and restore scripts, environment-based WebSocket configuration, trusted-host configuration, and production-oriented CORS handling. The backend image is built on Python 3.11-slim with system libraries, Python dependencies, PostgreSQL client support, backend source files, and Uvicorn; the frontend image uses a Node.js build stage followed by an Nginx runtime stage. The root route serves the compiled React frontend, the /api route proxies REST requests, and the /api/attacks/ws route supports WebSocket upgrades.
+P305 [Heading 2] 4.2  Algorithm Implementation
+P306 [Normal] The Detection Engine and Threat Intelligence / AI Investigation algorithms described in Section 3.2 were implemented as sequential backend pipelines. The complete thirteen-step operational pipeline — from raw event arrival to a downloadable report — is summarised below.
+P307 [List Paragraph] Step 1: A security event occurs — generated by a real user, a simulated attack, a request to the honeypot, a malicious payload, a failed login, or a WAF rule match.
+P308 [List Paragraph] Step 2: The backend receives the event and records source IP, target endpoint, HTTP method, payload, timestamp, protocol, status code, user agent, event source, and authentication result.
+P309 [List Paragraph] Step 3: Detection rules analyse the activity — SQL-Injection pattern found, XSS script tag found, login-failure threshold reached, OTP-request threshold exceeded, or a suspicious path accessed — and the engine assigns an attack category, severity, detection reason, and confidence.
+P310 [List Paragraph] Step 4: The attack is saved as a structured record containing an Attack ID, attack type, source IP, destination, payload, severity, timestamp, protocol, geographic information, threat reputation, and investigation status.
+P311 [List Paragraph] Step 5: Threat-Intelligence enrichment runs, converting a plain IP address into security context (country, ISP, abuse score, classification) using ip-api.com, AbuseIPDB, or a deterministic fallback.
+P312 [List Paragraph] Step 6: The event is broadcast in real time over WebSockets so the analyst sees the new event without reloading the browser.
+P313 [List Paragraph] Step 7: Logs are normalised into a common structure (source, event_type, source_ip, destination, timestamp, severity, action, payload, user, protocol) so that events from different sources can be compared.
+P314 [List Paragraph] Step 8: The Correlation Engine searches for relationships — for example, fifteen failed logins followed by one successful login may indicate a possible account-compromise incident.
+P315 [List Paragraph] Step 9: An incident is created containing a title, severity, related attacks, timeline, source IPs, target systems, investigation status, response status, and analyst notes.
+P316 [List Paragraph] Step 10: The analyst opens the AI Investigator (a linked investigation flow such as /agent?analyze_attack=<attack-id>) which sends the selected attack context to the AI workspace.
+P317 [List Paragraph] Step 11: The AI explains the security event through quick actions — Explain Attack, Recommend Firewall Rule, Explain Payload, Map to MITRE, and IOC Summary.
+P318 [List Paragraph] Step 12: The analyst chooses a response — block the IP, add or update a WAF rule, monitor the source, escalate, resolve, or trigger a webhook — remaining responsible for the final decision.
+P319 [List Paragraph] Step 13: A report is generated and exported as CSV, PDF, or an AI-generated narrative containing an executive summary, incident details, timeline, IOCs, attack techniques, evidence, actions taken, and recommendations.
+P320 [Heading 2] 4.3  Key API Routes
+P321 [Normal] Table 1: Key SentinelAI API Routes
+P322 [Normal] 
+P323 [Heading 2] 4.4  Test Cases
+P324 [Heading 3] 4.4.1  Unit & Functional Test Cases
+P325 [Normal] Table 2: Unit & Functional Test Cases
+P326 [Heading 3] 4.4.2  Integration Test Cases
+P327 [Normal] Table 3: Integration Test Cases
+P328 [Heading 3] 4.4.3  Scenario-Based Testing (Security Case Studies)
+P329 [Normal] Scenario A — Repeated Login Brute-Force: A script attempts multiple logins against the same account from a single source IP. The Detection Engine tracks the chronological pattern; once the configured failure threshold is reached within the rolling time window, a brute-force alert is raised and forwarded to the Correlation Engine.
+P330 [Normal] Scenario B — SQL Injection Probe: A manual attacker submits an obfuscated SQL payload into a login or search field. The Detection Engine's pattern-matching rules identify the payload as SQL Injection, assign a high severity, and store the attack record; the source IP is enriched by the Threat Intelligence Engine and the event appears immediately on the Live Attack Feed.
+P331 [Normal] Scenario C — Account-Compromise Correlation: A source IP generates fifteen failed login attempts followed by one successful login. The Correlation Engine groups these events into a single, higher-priority “possible account compromise” incident rather than presenting three unrelated alerts, and the AI Copilot is used to generate a recommended containment action.
+P332 [Heading 3] 4.4.4  User Acceptance Testing (UAT)
+P333 [Normal] Table 4: User Acceptance Testing Summary
+P334 [Heading 3] 4.4.5  Evaluation Metrics
+P335 [List Paragraph] Detection Accuracy — measures correct classification of known test payloads (SQLi, XSS, brute-force, OTP abuse).
+P336 [List Paragraph] False Positive Rate — measures benign inputs incorrectly marked as malicious.
+P337 [List Paragraph] Event Processing Time — measures the time from event arrival to storage and alert display.
+P338 [List Paragraph] WebSocket Latency — measures the time from backend event creation to the frontend dashboard update.
+P339 [List Paragraph] AI Response Latency — measures the time required for the AI Assistant to begin and complete an analysis.
+P340 [List Paragraph] Correlation Accuracy — measures whether related events are correctly grouped into a single incident.
+P341 [List Paragraph] System Stability — measures platform behaviour during service errors and external API failures.
+P342 [List Paragraph] Build Reliability — measures whether the frontend and backend can be built and started consistently.
+P343 [Normal] Current Observed Results: the backend automated test suite (Pytest) completed with 19 tests passing and no failures; the frontend production build (Vite) completed successfully, verifying React compilation, JavaScript bundling, dependency resolution, and asset generation; the Groq Cloud integration provided low-latency streaming AI responses; the WebSocket-based Attack Feed updated in real time; and the deployment files passed static configuration review, with full Docker-runtime validation tracked as a near-term roadmap item.
+P344 [Normal] 
+P345 [Heading 1] CHAPTER 5  RESULTS
+P346 [Heading 2] 5.1  Resulting Screens
+P347 [Normal] This section presents the operational screens of the deployed SentinelAI platform. Each subsection includes a placeholder for the corresponding application screenshot, to be inserted from the live deployment, followed by a short description of the screen's function.
+P348 [Heading 3] 5.1.1  Login Page
+P349 [Normal] 
+P350 [Normal] Screenshot 1: Login Page
+P351 [Normal] The Login page controls access to the platform, validating analyst credentials before granting entry to the protected Dashboard, attack details, administrative information, AI investigation features, reports, and WAF controls.
+P352 [Heading 3] 5.1.2  Dashboard Overview
+P353 [Normal] 
+P354 [Normal] Screenshot 2: Dashboard Overview
+P355 [Normal] The Dashboard is the primary overview page, answering “what is happening in the system right now?” by displaying total attacks, recent attacks, critical or high-severity events, active incidents, attack-type distribution, system health, and WAF activity, updating live over WebSockets as new events are recorded.
+P356 [Heading 3] 5.1.3  Live Attack Feed
+P357 [Normal] 
+P358 [Normal] Screenshot 3: Live Attack Feed
+P359 [Normal] The Attack Feed displays individual attack records — attack ID, type, severity, source IP, timestamp, target, protocol, detection source, payload, and investigation status — allowing the analyst to filter, sort by severity, search for an IP, and open an attack for AI investigation.
+P360 [Heading 3] 5.1.4  Threat Intelligence Panel
+P361 [Normal] 
+P362 [Normal] Screenshot 4: Threat Intelligence Panel
+P363 [Normal] The Threat Intelligence panel shows enrichment data for suspicious IP addresses — geolocation, ISP, abuse-confidence score, and known malicious status — sourced from ip-api.com and AbuseIPDB, or a deterministic fallback when external services are unavailable.
+P364 [Heading 3] 5.1.5  Honeypot Laboratory
+P365 [Normal] 
+P366 [Normal] Screenshot 5: Honeypot Laboratory
+P367 [Normal] The Honeypot Laboratory (Aetheris) shows the decoy environment's live activity log, LAN-mode toggle, and captured attacker interactions — payload, source IP, user agent, and access pattern — in real time as attackers interact with the decoy pages.
+P368 [Heading 3] 5.1.6  AI Security Copilot
+P369 [Normal] 
+P370 [Normal] Screenshot 6: AI Security Copilot
+P371 [Normal] The AI Security Copilot / Agent page is the AI-assisted analysis centre, offering conversational chat, AI model status, one-click quick actions (Explain Attack, Recommend Firewall Rule, Explain Payload, Map to MITRE, IOC Summary), and attack-aware context injected from the selected attack record.
+P372 [Heading 3] 5.1.7  Threat Correlation & Incidents
+P373 [Normal] 
+P374 [Normal] Screenshot 7: Threat Correlation & Incidents
+P375 [Normal] The Correlation and Incidents page converts independent events into meaningful incidents, displaying related attacks, incident severity, detection rule, timeline, source and target entities, incident status, and evidence — for example, grouping repeated failed logins and a subsequent successful login into a single credential-compromise incident.
+P376 [Heading 3] 5.1.8  Incident Response Actions
+P377 [Normal] 
+P378 [Normal] Screenshot 8: Incident Response Actions
+P379 [Normal] The Incident Response area lets the analyst acknowledge, investigate, escalate, contain, block, or resolve a confirmed or suspected incident, add analyst notes, and trigger webhook-style notifications for future integration with Slack, Microsoft Teams, email, or ticketing systems.
+P380 [Heading 3] 5.1.9  WAF Manager
+P381 [Normal] 
+P382 [Normal] Screenshot 9: WAF Manager
+P383 [Normal] The WAF Manager allows the analyst to review and manage WAFRule and WAFHit records, inspecting the URL path, query parameters, request body, headers, source IP, payload patterns, and HTTP method of every blocked request, and configure the custom HTTP 403 response page.
+P384 [Heading 3] 5.1.10  MITRE ATT&CK Mapping View
+P385 [Normal] 
+P386 [Normal] Screenshot 10: MITRE ATT&CK Mapping View
+P387 [Normal] The MITRE ATT&CK mapping view, generated through the AI Copilot's Map to MITRE action, associates a detected attack with the corresponding MITRE ATT&CK tactic and technique, helping the analyst understand the attacker's likely objective and standard defensive countermeasures.
+P388 [Heading 3] 5.1.11  Reports Module
+P389 [Normal] 
+P390 [Normal] Screenshot 11: Reports Module
+P391 [Normal] The Reports page converts technical findings into exportable documentation — attack reports, incident reports, daily security summaries, honeypot activity reports, WAF activity reports, threat-intelligence reports, and executive summaries — in CSV, PDF, or AI-generated narrative format.
+P392 [Heading 3] 5.1.12  Settings Page
+P393 [Normal] 
+P394 [Normal] Screenshot 12: Settings Page
+P395 [Normal] The Settings page controls detection thresholds, severity thresholds, notification configuration, AI-provider configuration status, feature toggles, honeypot LAN-mode, and report preferences, with sensitive values such as API keys always masked before being returned to the frontend.
+P396 [Heading 3] 5.1.13  Testing Evidence — Backend Test Suite
+P397 [Normal] 
+P398 [Normal] Screenshot 13: Testing Evidence — Backend Test Suite
+P399 [Normal] This placeholder is reserved for a terminal / CI screenshot of the backend Pytest suite (19 tests passing) and the frontend Vite production build output, evidencing the automated testing results discussed in Section 4.4.
+P400 [Heading 2] 5.2  Results Analysis
+P401 [Heading 3] 5.2.1  Functional Outcomes
+P402 [List Paragraph] The Dashboard provides immediate security visibility across attacks, incidents, and system health.
+P403 [List Paragraph] The Honeypot Laboratory produces controlled, realistic security events for safe demonstration and testing.
+P404 [List Paragraph] The Detection Engine correctly identifies common web-attack patterns, including SQL Injection, XSS, and brute-force login attempts.
+P405 [List Paragraph] The Threat Intelligence Engine successfully enriches source IPs with geolocation and abuse-reputation data.
+P406 [List Paragraph] The Correlation Engine groups related events into higher-level incidents, reducing alert fatigue.
+P407 [List Paragraph] The AI Security Copilot converts technical evidence into understandable, actionable explanations.
+P408 [List Paragraph] The Reporting Module documents completed investigations in Markdown, PDF, and CSV formats.
+P409 [List Paragraph] The Docker-based deployment foundation prepares the system for containerised local validation and future hybrid deployment.
+P410 [Heading 2] 5.3  Comparative Analysis
+P411 [Heading 3] 5.3.1  Comparison with Basic Student Security Projects
+P412 [Normal] Many student security projects perform only a single function — a basic honeypot records requests, a basic Intrusion Detection System detects signatures, a basic chatbot answers general questions, or a basic dashboard simply displays data. SentinelAI connects all of these functions into one continuous pipeline: Event → Detection → Enrichment → Correlation → AI Investigation → Response → Reporting. This end-to-end integration, rather than any single feature in isolation, is the major result of the project.
+P413 [Heading 3] 5.3.2  Comparison with Enterprise SIEM Systems
+P414 [Normal] SentinelAI is smaller and easier to understand than enterprise SIEM platforms such as Splunk Enterprise Security or IBM QRadar. It does not yet provide enterprise-scale log ingestion, compliance certification, high availability, or broad third-party connectors. Its strength lies instead in educational completeness and architectural clarity — every stage of the SOC lifecycle is visible, inspectable, and explainable, which is precisely what makes it suitable for cybersecurity education, SOC-workflow demonstration, and portfolio development.
+P415 [Normal] 
+P416 [Heading 1] CHAPTER 6  CONCLUSION & FUTURE SCOPE
+P417 [Heading 2] 6.1  Conclusion
+P418 [Normal] SentinelAI successfully demonstrates how artificial intelligence can be integrated with modern cybersecurity technologies to improve threat detection, investigation, and incident response. The project combines a Detection Engine, Threat Intelligence enrichment, a Honeypot Laboratory, a Correlation Engine, a Web Application Firewall, an AI Security Assistant, MITRE ATT&CK mapping, and automated reporting into a single, unified Security Operations Centre platform.
+P419 [Normal] SentinelAI demonstrates that multiple cybersecurity capabilities — event collection, rule-based detection, threat-intelligence enrichment, log normalisation, event correlation, AI-assisted investigation, defensive response, and reporting — can be combined into one integrated, understandable platform. The project is technically significant because it combines cybersecurity engineering, artificial intelligence, frontend development, backend development, database management, WebSocket communication, threat intelligence, incident response, and deployment infrastructure within a single application. Its major achievement is not any single feature, but the complete security lifecycle it demonstrates end-to-end:
+P420 [Normal] Collect → Detect → Enrich → Normalize → Correlate → Investigate → Respond → Report
+P421 [Normal] SentinelAI is useful as an academic project, an internship demonstration, a portfolio platform, a SOC-training environment, a controlled cybersecurity laboratory, and a foundation for future operational deployment. The project currently has a stable AI Investigator workspace, a passing backend test suite, a successful frontend production build, documented architecture, real-time monitoring, working Groq AI integration, and a committed containerised deployment foundation. By reducing investigative effort and unifying detection, enrichment, correlation, response, and reporting into a single platform, SentinelAI improves analyst productivity while remaining an effective educational tool for cybersecurity students and researchers. Its modular architecture, real-time monitoring, and scalable design make it well suited for future enhancement and eventual enterprise-oriented deployment.
+P422 [Heading 2] 6.2  Future Scope
+P423 [Heading 3] 6.2.1  Near-Term Enhancements
+P424 [List Paragraph] Local Docker Validation: audit and fully run the Docker stack locally, verifying database initialisation, API routing, WebSocket delivery, and report persistence.
+P425 [List Paragraph] Database Migrations: introduce a formal migration system (Alembic) to manage schema changes safely as the platform evolves.
+P426 [List Paragraph] Role-Based Access Control: introduce distinct roles such as Administrator, SOC Analyst, Investigator, and Read-Only Viewer.
+P427 [List Paragraph] Multi-Factor Authentication: require MFA for administrative users.
+P428 [List Paragraph] Rate Limiting: apply rate limits to login, AI, report, and other sensitive API endpoints.
+P429 [List Paragraph] Secure Public Deployment: add HTTPS, a registered domain, hardened firewall rules, secure secrets management, and backup verification.
+P430 [Heading 3] 6.2.2  Detection & Intelligence Enhancements
+P431 [List Paragraph] Anomaly Detection: introduce machine-learning models to detect deviations from normal activity beyond fixed rule signatures.
+P432 [List Paragraph] Advanced Correlation: use graph-based relationships, risk scoring, and temporal models for deeper incident correlation.
+P433 [List Paragraph] Network & Endpoint Telemetry: integrate Zeek, Suricata, or packet metadata, and endpoint agents providing process, file, registry, and authentication events.
+P434 [List Paragraph] Threat Intelligence Expansion: integrate additional providers such as VirusTotal, MISP, AlienVault OTX, and GreyNoise.
+P435 [Heading 3] 6.2.3  Automation & Integration Enhancements
+P436 [List Paragraph] SOAR Playbooks: convert response actions into configurable, repeatable automation playbooks.
+P437 [List Paragraph] Ticket & Communication Integration: automatically create Jira, ServiceNow, or GitHub issues, and send Slack, Microsoft Teams, Telegram, or email notifications.
+P438 [List Paragraph] Voice-Enabled AI Assistant: extend the AI Copilot with voice interaction for hands-free incident investigation.
+P439 [List Paragraph] Model Flexibility: support multiple AI providers and local fallback models.
+P440 [Heading 3] 6.2.4  Platform & Deployment Enhancements
+P441 [List Paragraph] Observability: integrate Prometheus, Grafana, centralised logging, and Sentry for platform health monitoring.
+P442 [List Paragraph] Container Security: implement image scanning, non-root users, read-only file systems, dependency pinning, and security profiles.
+P443 [List Paragraph] High Availability: support multiple backend instances, managed PostgreSQL, object storage, and load balancing.
+P444 [List Paragraph] Cloud-Native Deployment: deploy SentinelAI on Kubernetes for scalable, enterprise-grade cloud security monitoring.
+P445 [List Paragraph] Compliance Reporting: add report templates aligned with ISO 27001, NIST, SOC 2, and PCI DSS.
+P446 [List Paragraph] Mobile / Responsive SOC Dashboard: provide a mobile-friendly dashboard for monitoring threats and incidents on the go.
+P447 [Normal] With continued improvement in authentication, database migrations, monitoring, anomaly detection, secure laboratory connectivity, and scalability, SentinelAI could evolve into a more advanced, custom Security Operations Platform suitable for real-world small-to-medium organisational deployment.
+P448 [Normal] 
+P449 [Normal] REFERENCES
+P450 [Normal] 1.  National Institute of Standards and Technology. Computer Security Incident Handling Guide, NIST Special Publication 800-61.
+P451 [Normal] 2.  National Institute of Standards and Technology. Cybersecurity Framework.
+P452 [Normal] 3.  MITRE Corporation. MITRE ATT&CK Knowledge Base.
+P453 [Normal] 4.  OWASP Foundation. OWASP Top 10 Web Application Security Risks.
+P454 [Normal] 5.  OWASP Foundation. Web Security Testing Guide.
+P455 [Normal] 6.  OWASP Foundation. ModSecurity Core Rule Set Documentation.
+P456 [Normal] 7.  OWASP. Authentication Cheat Sheet.
+P457 [Normal] 8.  OWASP. Cross-Site Scripting Prevention Cheat Sheet.
+P458 [Normal] 9.  OWASP. SQL Injection Prevention Cheat Sheet.
+P459 [Normal] 10.  OWASP. REST Security Cheat Sheet.
+P460 [Normal] 11.  OWASP. Secrets Management Cheat Sheet.
+P461 [Normal] 12.  Kent Scarfone and Peter Mell. Guide to Intrusion Detection and Prevention Systems, NIST SP 800-94.
+P462 [Normal] 13.  Karen Kent and Murugiah Souppaya. Guide to Computer Security Log Management, NIST SP 800-92.
+P463 [Normal] 14.  NIST. Zero Trust Architecture, Special Publication 800-207.
+P464 [Normal] 15.  FastAPI Official Documentation.
+P465 [Normal] 16.  React Official Documentation.
+P466 [Normal] 17.  Vite Official Documentation.
+P467 [Normal] 18.  SQLAlchemy Official Documentation.
+P468 [Normal] 19.  PostgreSQL Official Documentation.
+P469 [Normal] 20.  Docker Official Documentation.
+P470 [Normal] 21.  Docker Compose Official Documentation.
+P471 [Normal] 22.  Nginx Official Documentation.
+P472 [Normal] 23.  Python Software Foundation. Python Documentation.
+P473 [Normal] 24.  Groq Cloud API Documentation.
+P474 [Normal] 25.  Meta AI. Llama Model Documentation.
+P475 [Normal] 26.  AbuseIPDB API Documentation.
+P476 [Normal] 27.  IP-API Geolocation Service Documentation.
+P477 [Normal] 28.  Chris Sanders. Practical Packet Analysis.
+P478 [Normal] 29.  Richard Bejtlich. The Practice of Network Security Monitoring.
+P479 [Normal] 30.  Michael Collins. Network Security Through Data Analysis.
+P480 [Normal] 31.  Anton Chuvakin, Kevin Schmidt, and Chris Phillips. Logging and Log Management.
+P481 [Normal] 32.  Git Project Documentation.
+P482 [Normal] 33.  GitHub Documentation for Repository and Security Management.

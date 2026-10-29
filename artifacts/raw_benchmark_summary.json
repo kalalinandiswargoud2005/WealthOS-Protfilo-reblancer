@@ -1,0 +1,85 @@
+{
+  "timestamp": "2026-10-08 20:35:54",
+  "simulation_horizon_days": 30,
+  "total_ticks": 43200,
+  "assets_count": 16,
+  "initial_cash": 50000.0,
+  "results_baseline": {
+    "buy_and_hold": {
+      "mean_drift": 8.121338010032217,
+      "max_drift": 9.388268649139919,
+      "std_drift": 0.9342153163384974,
+      "final_value": 924147.0649240079,
+      "annualized_return": 12.388416099866784,
+      "annualized_vol": 7.694298334281687,
+      "sharpe_ratio": 0.7652960470262953,
+      "max_drawdown": 2.633112277171033,
+      "trade_count": 0,
+      "total_deployed": 0.0,
+      "mean_latency_ms": 0.1544505705650168,
+      "drift_red": 0.0
+    },
+    "periodic_30d": {
+      "mean_drift": 8.121338010032217,
+      "max_drift": 9.388268649139919,
+      "std_drift": 0.9342153163384974,
+      "final_value": 924147.0649240079,
+      "annualized_return": 12.388416099866784,
+      "annualized_vol": 7.694298334281687,
+      "sharpe_ratio": 0.7652960470262953,
+      "max_drawdown": 2.633112277171033,
+      "trade_count": 0,
+      "total_deployed": 0.0,
+      "mean_latency_ms": 0.01447816812915021,
+      "drift_red": 0.0
+    },
+    "periodic_7d": {
+      "mean_drift": 2.596283706616668,
+      "max_drift": 7.388214476999742,
+      "std_drift": 2.276530814778525,
+      "final_value": 921609.7490080153,
+      "annualized_return": 9.987616412100504,
+      "annualized_vol": 8.19297694800969,
+      "sharpe_ratio": 0.425683659826206,
+      "max_drawdown": 2.8970804790930966,
+      "trade_count": 55,
+      "total_deployed": 147904.90824703855,
+      "mean_latency_ms": 0.014019529228152215,
+      "drift_red": 68.03133050970787
+    },
+    "wealthos_cash_only": {
+      "mean_drift": 5.702437585838245,
+      "max_drift": 7.2771342166669,
+      "std_drift": 1.0827321863490793,
+      "final_value": 925115.03328731,
+      "annualized_return": 13.220824990262416,
+      "annualized_vol": 8.120777110521919,
+      "sharpe_ratio": 0.8276086018361944,
+      "max_drawdown": 2.8391367450956353,
+      "trade_count": 3,
+      "total_deployed": 50000.0,
+      "mean_latency_ms": 0.014019543947330836,
+      "drift_red": 29.784506213211724
+    },
+    "wealthos_twoway": {
+      "mean_drift": 1.172819212716664,
+      "max_drift": 6.370189308816923,
+      "std_drift": 0.27773001696450494,
+      "final_value": 920940.266736589,
+      "annualized_return": 9.20876731327476,
+      "annualized_vol": 8.447847354022308,
+      "sharpe_ratio": 0.32064586394130623,
+      "max_drawdown": 3.2773861494856558,
+      "trade_count": 71,
+      "total_deployed": 153152.44335742094,
+      "mean_latency_ms": 0.01443794061397684,
+      "drift_red": 85.55879325219698
+    }
+  },
+  "math_latency_benchmarks_ms": {
+    "mean": 0.00839409998152405,
+    "p50": 0.007200054824352264,
+    "p95": 0.009899958968162537,
+    "p99": 0.01610000617802143
+  }
+}

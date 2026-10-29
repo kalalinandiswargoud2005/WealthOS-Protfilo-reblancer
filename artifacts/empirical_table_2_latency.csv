@@ -1,0 +1,5 @@
+Computation Component,Mean Latency,Median (P50),P95 Latency,P99 Latency,VRAM / Memory,Execution Context
+Deterministic Drift Engine (Python/NumPy),0.0084 ms,0.0072 ms,0.0099 ms,0.0161 ms,Negligible (<1 MB),Local Client Process
+Client React 19 State Loop (Context/V8),< 1.5000 ms,< 1.0000 ms,< 2.5000 ms,< 4.0000 ms,In-Memory RAM (~15 MB),Browser JavaScript V8 Engine
+Local LLM Rationale (Llama 3.2 3B Q4 - Ollama)*,[DATA REQUIRED - Target ~350-450 ms],[DATA REQUIRED],[DATA REQUIRED],[DATA REQUIRED],~2.1 GB VRAM,On-Device Local Daemon
+Cloud API (Google Gemini 2.5 Flash)*,[DATA REQUIRED - Target ~1.2-1.8 s],[DATA REQUIRED],[DATA REQUIRED],[DATA REQUIRED],Zero Local VRAM,External Cloud HTTPS REST

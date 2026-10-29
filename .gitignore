@@ -23,3 +23,23 @@ dist-ssr
 *.sln
 *.sw?
 .env
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Word temporary files and backups
+~$*
+*.bak
+
+# Temporary preview and debug artifacts
+check_plain_*.png
+debug_orig_*.png
+final_preview_*.png
+student_proof_*.png
+test_out.pdf
+test_phase1.pdf
+test_sections_out.*
+test_sections_script.py
+preview_batch1/
